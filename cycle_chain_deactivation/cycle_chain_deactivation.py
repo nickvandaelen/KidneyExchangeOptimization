@@ -9,7 +9,7 @@ TIMEOUT = 300
 MAX_ITERATIONS = 1000
 
 
-def run_cycle_chain_deactivation(data):
+def run_cycle_chain_deactivation(data, output_file_path):
     init_time_model_cpu = time.time()
 
     allo = Allocation()
@@ -96,7 +96,7 @@ def run_cycle_chain_deactivation(data):
 
     allo.info.timeCPU[0] = time.time() - init_time_model_cpu
 
-    write_cycles_chains_to_file(selected_cycles_chains)
+    write_cycles_chains_to_file(selected_cycles_chains, output_file_path)
     allo.printInfo()
 
 
