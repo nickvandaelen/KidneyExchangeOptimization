@@ -1,14 +1,16 @@
 class NDD:
     def __init__(self, id, blood, nbEdges, targets, scores):
         self.id = id
-        # self.age = age
         self.blood = blood
         self.nbEdges = nbEdges
         self.targets = targets
         self.scores = scores
 
     def print(self):
-        print(f"NDD {self.id}\t blood type {self.blood}\t nbEdges {self.nbEdges}\t", end="")
+        print(
+            f"NDD {self.id}\t blood type {self.blood}\t nbEdges {self.nbEdges}\t",
+            end="",
+        )
         for i in range(self.nbEdges):
             print(f"({self.targets[i]} - {self.scores[i]})", end=" ")
         print()
@@ -18,26 +20,27 @@ class Pair:
     def __init__(self, id, source, bloodP, bloodD, vpra, nbEdges, targets, scores):
         self.id = id
         self.source = source
-        # self.age = age
         self.bloodP = bloodP
         self.bloodD = bloodD
-        # self.wt = wt
         self.vpra = vpra
-        # self.hs = hs
         self.nbEdges = nbEdges
         self.targets = targets
         self.scores = scores
 
     def print(self):
-        print(f"Pair {self.id}\t source {self.source}\t blood types {self.bloodP} {self.bloodD}\t vpra {self.vpra} \t nbEdges {self.nbEdges}\t", end="")
+        print(
+            f"Pair {self.id}\t source {self.source}\t blood types {self.bloodP} {self.bloodD}\t vpra {self.vpra} \t nbEdges {self.nbEdges}\t",
+            end="",
+        )
         for i in range(self.nbEdges):
             print(f"({self.targets[i]} - {self.scores[i]})", end=" ")
         print()
 
+
 class Info:
     def __init__(self):
         self.opt = False  # boolean for optimal solution flag
-        self.timeCPU = [0.0] * 7
+        self.timeCPU = [0.0] * 7 # cpu times for different phases in optimization
         self.LB = 0  # lower bound
         self.UB = 0  # upper bound
         self.contUB = 0.0  # continuous upper bound
@@ -89,52 +92,81 @@ class Allocation:
 
     def load(self, data):
         self.maxId = 0
-        self.nbPairs = data['num_pairs']
-        self.nbNDDs = data['num_ndd']
+        self.nbPairs = data["num_pairs"]
+        self.nbNDDs = data["num_ndd"]
 
         # process NDDs and pairs
-        for entry in data['pairs']:
-            id = entry['id']
-            is_ndd = entry['is_ndd']
-            blood_donor = entry['donor_blood_type']
-            blood_patient = entry['patient_blood_type']
-            vpra = entry['patient_vpra']
+        for entry in data["pairs"]:
+            id = entry["id"]
+            is_ndd = entry["is_ndd"]
+            blood_donor = entry["donor_blood_type"]
+            blood_patient = entry["patient_blood_type"]
+            vpra = entry["patient_vpra"]
 
             if is_ndd:
                 ndd = NDD(id, blood=blood_donor, nbEdges=0, targets=[], scores=[])
                 self.NDDs.append(ndd)
                 if id not in self.idToIdxA:
-                    self.idToIdxA[id] = [len(self.NDDs) - 1] # store index of new NDD in self.NDDs
+                    self.idToIdxA[id] = [
+                        len(self.NDDs) - 1
+                    ]  # store index of new NDD in self.NDDs
             else:
-                pair = Pair(id=id, source=id, bloodP=blood_patient, bloodD=blood_donor, vpra=vpra, nbEdges=0, targets=[], scores=[])
+                pair = Pair(
+                    id=id,
+                    source=id,
+                    bloodP=blood_patient,
+                    bloodD=blood_donor,
+                    vpra=vpra,
+                    nbEdges=0,
+                    targets=[],
+                    scores=[],
+                )
                 self.pairs.append(pair)
                 if id not in self.idToIdxP:
-                    self.idToIdxP[id] = [len(self.pairs) - 1] # store index of new pair in self.pairs
+                    self.idToIdxP[id] = [
+                        len(self.pairs) - 1
+                    ]  # store index of new pair in self.pairs
 
             self.maxId = max(self.maxId, id)
 
-        self.comp = [[-1 for _ in range(self.maxId + 1)] for _ in range(self.maxId + 1)] # initialize
-        self.scores = [[-1 for _ in range(self.maxId + 1)] for _ in range(self.maxId + 1)] # initialize
+        self.comp = [
+            [-1 for _ in range(self.maxId + 1)] for _ in range(self.maxId + 1)
+        ]  # initialize
+        self.scores = [
+            [-1 for _ in range(self.maxId + 1)] for _ in range(self.maxId + 1)
+        ]  # initialize
 
         # fill compatibility and score matrices based on arcs
-        for arc in data['arcs']:
-            donor_id = arc['donor_id']
-            patient_id = arc['patient_id']
-            weight = arc['weight']
+        for arc in data["arcs"]:
+            donor_id = arc["donor_id"]
+            patient_id = arc["patient_id"]
+            weight = arc["weight"]
 
             self.comp[donor_id][patient_id] = 1
             self.scores[donor_id][patient_id] = weight
 
         # link targets and scores to pairs and NDDs
         for pair in self.pairs:
-            pair.nbEdges = sum([1 for arc in data['arcs'] if arc['donor_id'] == pair.source])
-            pair.targets = [arc['patient_id'] for arc in data['arcs'] if arc['donor_id'] == pair.source]
-            pair.scores = [arc['weight'] for arc in data['arcs'] if arc['donor_id'] == pair.source]
+            pair.nbEdges = sum(
+                [1 for arc in data["arcs"] if arc["donor_id"] == pair.source]
+            )
+            pair.targets = [
+                arc["patient_id"]
+                for arc in data["arcs"]
+                if arc["donor_id"] == pair.source
+            ]
+            pair.scores = [
+                arc["weight"] for arc in data["arcs"] if arc["donor_id"] == pair.source
+            ]
 
         for ndd in self.NDDs:
-            ndd.nbEdges = sum([1 for arc in data['arcs'] if arc['donor_id'] == ndd.id])
-            ndd.targets = [arc['patient_id'] for arc in data['arcs'] if arc['donor_id'] == ndd.id]
-            ndd.scores = [arc['weight'] for arc in data['arcs'] if arc['donor_id'] == ndd.id]
+            ndd.nbEdges = sum([1 for arc in data["arcs"] if arc["donor_id"] == ndd.id])
+            ndd.targets = [
+                arc["patient_id"] for arc in data["arcs"] if arc["donor_id"] == ndd.id
+            ]
+            ndd.scores = [
+                arc["weight"] for arc in data["arcs"] if arc["donor_id"] == ndd.id
+            ]
 
         # create cycles
         for i in range(self.maxId + 1):
@@ -144,7 +176,13 @@ class Allocation:
                     for k, tId in enumerate(self.pairs[idx].targets):
                         if not hbP[tId]:
                             if self.comp[tId][i] == 1 and i <= tId:
-                                cycle = CycleChain(id=len(self.cyclechains), size=2, idX=[i, tId], nbBA=0, score=self.scores[i][tId] + self.scores[tId][i])
+                                cycle = CycleChain(
+                                    id=len(self.cyclechains),
+                                    size=2,
+                                    idX=[i, tId],
+                                    nbBA=0,
+                                    score=self.scores[i][tId] + self.scores[tId][i],
+                                )
                                 self.cyclechains.append(cycle)
                                 self.types[0] += 1
 
@@ -152,8 +190,21 @@ class Allocation:
                             hbP2 = [False] * (self.maxId + 1)
                             for idx2 in self.idToIdxP.get(tId, []):
                                 for m, tId2 in enumerate(self.pairs[idx2].targets):
-                                    if not hbP2[tId2] and self.comp[tId2][i] == 1 and i <= tId and i <= tId2:
-                                        cycle = CycleChain(id=len(self.cyclechains), size=3, idX=[i, tId, tId2], nbBA=0, score=self.scores[i][tId] + self.scores[tId][tId2] + self.scores[tId2][i])
+                                    if (
+                                        not hbP2[tId2]
+                                        and self.comp[tId2][i] == 1
+                                        and i <= tId
+                                        and i <= tId2
+                                    ):
+                                        cycle = CycleChain(
+                                            id=len(self.cyclechains),
+                                            size=3,
+                                            idX=[i, tId, tId2],
+                                            nbBA=0,
+                                            score=self.scores[i][tId]
+                                            + self.scores[tId][tId2]
+                                            + self.scores[tId2][i],
+                                        )
                                         if self.comp[i][tId2] == 1:
                                             cycle.nbBA += 1
                                         if self.comp[tId][i] == 1:
@@ -167,19 +218,40 @@ class Allocation:
 
         # create chains (NDDs initiating chains)
         for ndd in self.NDDs:
-            chain1 = CycleChain(id=len(self.cyclechains), size=1, idX=[ndd.id], nbBA=0, score=0, isChain=1)
+            chain1 = CycleChain(
+                id=len(self.cyclechains),
+                size=1,
+                idX=[ndd.id],
+                nbBA=0,
+                score=0,
+                isChain=1,
+            )
             self.cyclechains.append(chain1)
             self.types[2] += 1
 
             for j, tId in enumerate(ndd.targets):
-                chain2 = CycleChain(id=len(self.cyclechains), size=2, idX=[ndd.id, tId], nbBA=0, score=self.scores[ndd.id][tId], isChain=1)
+                chain2 = CycleChain(
+                    id=len(self.cyclechains),
+                    size=2,
+                    idX=[ndd.id, tId],
+                    nbBA=0,
+                    score=self.scores[ndd.id][tId],
+                    isChain=1,
+                )
                 self.cyclechains.append(chain2)
                 self.types[3] += 1
                 hbP2 = [False] * (self.maxId + 1)
                 for idx2 in self.idToIdxP.get(tId, []):
                     for m, tId2 in enumerate(self.pairs[idx2].targets):
                         if not hbP2[tId2]:
-                            chain3 = CycleChain(id=len(self.cyclechains), size=3, idX=[ndd.id, tId, tId2], nbBA=0, score=self.scores[ndd.id][tId] + self.scores[tId][tId2], isChain=1)
+                            chain3 = CycleChain(
+                                id=len(self.cyclechains),
+                                size=3,
+                                idX=[ndd.id, tId, tId2],
+                                nbBA=0,
+                                score=self.scores[ndd.id][tId] + self.scores[tId][tId2],
+                                isChain=1,
+                            )
                             if self.comp[ndd.id][tId2] == 1:
                                 chain3.nbBA += 1
                             if self.comp[tId2][tId] == 1:
@@ -190,7 +262,16 @@ class Allocation:
                             for idx3 in self.idToIdxP.get(tId2, []):
                                 for o, tId3 in enumerate(self.pairs[idx3].targets):
                                     if not hbP3[tId3] and tId != tId3:
-                                        chain4 = CycleChain(id=len(self.cyclechains), size=4, idX=[ndd.id, tId, tId2, tId3], nbBA=0, score=self.scores[ndd.id][tId] + self.scores[tId][tId2] + self.scores[tId2][tId3], isChain=1)
+                                        chain4 = CycleChain(
+                                            id=len(self.cyclechains),
+                                            size=4,
+                                            idX=[ndd.id, tId, tId2, tId3],
+                                            nbBA=0,
+                                            score=self.scores[ndd.id][tId]
+                                            + self.scores[tId][tId2]
+                                            + self.scores[tId2][tId3],
+                                            isChain=1,
+                                        )
                                         if self.comp[ndd.id][tId2] == 1:
                                             chain4.nbBA += 1
                                         if self.comp[ndd.id][tId3] == 1:
@@ -206,7 +287,6 @@ class Allocation:
                                     hbP3[tId3] = True
                         hbP2[tId2] = True
 
-
     def printProb(self):
         print(f"Instance")
         for ndd in self.NDDs:
@@ -218,43 +298,68 @@ class Allocation:
     def printCyclesChains(self):
         for cyclechain in self.cyclechains:
             cyclechain_type = "Chain" if cyclechain.isChain == 1 else "Cycle"
-            
-            print(f"{cyclechain_type:<7} {cyclechain.id:<5} size {cyclechain.size:<3} ", end="")
+
+            print(
+                f"{cyclechain_type:<7} {cyclechain.id:<5} size {cyclechain.size:<3} ",
+                end="",
+            )
             for i in range(cyclechain.size - 1):
                 print(f"{cyclechain.idX[i]:<4} ", end="")
-            print(f"{cyclechain.idX[-1]:<4}  nbBackArcs {cyclechain.nbBA:<3}  score {cyclechain.score}")
+            print(
+                f"{cyclechain.idX[-1]:<4}  nbBackArcs {cyclechain.nbBA:<3}  score {cyclechain.score}"
+            )
 
-    def printInfo(allo):
+    def printAndWriteInfo(allo, selected_cycles_chains, output_file_path):
         info = {
-                "Optimal Solution Found": allo.info.opt,
-                "Total Time (s)": allo.info.timeCPU[0],
-                "Initialization Time (s)": allo.info.timeCPU[1],
-                "CycleLP Time (s)": allo.info.timeCPU[2],
-                "Cycle Deactivation Time (s)": allo.info.timeCPU[3],
-                "Other Time (s)": allo.info.timeCPU[4],
-                "Final Optimization Time (s)": allo.info.timeCPU[5],
-                "Post-Processing Time (s)": allo.info.timeCPU[6],
-                "Objective 1 (Max. Cycles and Chains)": allo.objs[0] if len(allo.objs) > 0 else None,
-                "Objective 2 (Min. Cycles and Chains of Size 4)": allo.objs[1] if len(allo.objs) > 1 else None,
-                "Objective 3 (Min. Cycles Chains of Size 3)": allo.objs[2] if len(allo.objs) > 2 else None,
-                "Objective 4 (Max. Number of Backarcs)": allo.objs[3] if len(allo.objs) > 3 else None,
-                "Objective 5 (Max. Total Score/Weight)": allo.objs[4] if len(allo.objs) > 4 else None,
-                "Number of Variables": allo.info.nbVar,
-                "Number of Constraints": allo.info.nbCons,
-                "Number of Non-Zeros": allo.info.nbNZ,
-                "CycleLP Failures": allo.fails[0] if len(allo.fails) > 0 else None,
-                "Cycle Deactivation Failures": allo.fails[1] if len(allo.fails) > 1 else None,
-                "Post-Processing Failures": allo.fails[2] if len(allo.fails) > 2 else None, 
-                # "Cycle(s) of Size 2": allo.types[0], # these only indicate the possible cycles and chains, not the solution
-                # "Cycle(s) of Size 3": allo.types[1],
-                # "Chain(s) of Size 1": allo.types[2],
-                # "Chain(s) of Size 2": allo.types[3],
-                # "Chain(s) of Size 3": allo.types[4],
-                # "Chain(s) of Size 4": allo.types[5]
+            "Optimal Solution Found": allo.info.opt,
+            "Total Time (s)": allo.info.timeCPU[0],
+            "Initialization Time (s)": allo.info.timeCPU[1],
+            "CycleLP Time (s)": allo.info.timeCPU[2],
+            "Cycle Deactivation Time (s)": allo.info.timeCPU[3],
+            "Other Time (s)": allo.info.timeCPU[4],
+            "Final Optimization Time (s)": allo.info.timeCPU[5],
+            "Post-Processing Time (s)": allo.info.timeCPU[6],
+            "Objective 1 (Max. Cycles and Chains)": (
+                allo.objs[0] if len(allo.objs) > 0 else None
+            ),
+            "Objective 2 (Min. Cycles and Chains of Size 4)": (
+                allo.objs[1] if len(allo.objs) > 1 else None
+            ),
+            "Objective 3 (Min. Cycles Chains of Size 3)": (
+                allo.objs[2] if len(allo.objs) > 2 else None
+            ),
+            "Objective 4 (Max. Number of Backarcs)": (
+                allo.objs[3] if len(allo.objs) > 3 else None
+            ),
+            "Objective 5 (Max. Total Score/Weight)": (
+                allo.objs[4] if len(allo.objs) > 4 else None
+            ),
+            "Number of Variables": allo.info.nbVar,
+            "Number of Constraints": allo.info.nbCons,
+            "Number of Non-Zeros": allo.info.nbNZ,
+            "CycleLP Failures": allo.fails[0] if len(allo.fails) > 0 else None,
+            "Cycle Deactivation Failures": (
+                allo.fails[1] if len(allo.fails) > 1 else None
+            ),
+            "Post-Processing Failures": allo.fails[2] if len(allo.fails) > 2 else None,
+        }
 
-            }
+        with open(output_file_path, "w") as f:
+            f.write("Solution:\n")
+            for idx, cc in enumerate(selected_cycles_chains):
+                f.write(f"{idx + 1}:\n")
+                if cc.isChain:
+                    f.write("Type: Chain\n")
+                else:
+                    f.write("Type: Cycle\n")
+                f.write(f"Size: {len(cc.idX)}\n")
+                f.write(f"Nodes: {', '.join(map(str, cc.idX))}\n")
+                f.write(f"Number of Back Arcs: {cc.nbBA}\n")
+                f.write(f"Score: {cc.score}\n")
+                f.write("-------------------------------------------\n")
+            f.write(f"Total score: {sum(cc.score for cc in selected_cycles_chains)}\n")
+            f.write("\nOptimization information:\n")
 
-        for label, value in info.items():
-            print(f"{label}: {value}")
-
-
+            for label, value in info.items():
+                f.write(f"{label}: {value}\n")
+                print(f"{label}: {value}")

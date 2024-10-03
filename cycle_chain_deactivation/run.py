@@ -2,6 +2,8 @@ import os
 from allocation import Allocation
 from cycle_chain_deactivation import run_cycle_chain_deactivation
 
+FILENAME = "aDelorme_Example_EC1.txt"
+
 
 def import_kidney_data(filepath):
     """
@@ -101,10 +103,11 @@ def import_kidney_data(filepath):
     # Return the final structured dictionary
     return data
 
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(script_dir)
 
-file_path = os.path.join(parent_dir, "Instance Files", "Delorme_50_NDD_Unit_0.txt")
+file_path = os.path.join(parent_dir, "Instance Files", FILENAME)
 data = import_kidney_data(file_path)
 
 solutions_dir = os.path.join(script_dir, "Solutions")

@@ -82,12 +82,9 @@ def run_cycle_chain_deactivation(data, output_file_path):
             if iteration >= MAX_ITERATIONS:
                 print(f"Reached maximum iterations for objective {i}")
                 break
-
-    # record CPU time for each phase
-    for idx in range(4):
-        allo.info.timeCPU[idx + 2] = time.time() - init_time_model_cpu
-        for j in range(idx + 1):
-            allo.info.timeCPU[idx + 2] -= allo.info.timeCPU[j + 1]
+        allo.info.timeCPU[i + 2] = time.time() - init_time_model_cpu
+        for j in range(i + 1):
+            allo.info.timeCPU[i + 2] -= allo.info.timeCPU[j + 1]
 
     obj_val, selected_cycles_chains = cycleILP(allo, init_time_model_cpu, 4)
     allo.info.timeCPU[6] = time.time() - init_time_model_cpu
@@ -96,8 +93,7 @@ def run_cycle_chain_deactivation(data, output_file_path):
 
     allo.info.timeCPU[0] = time.time() - init_time_model_cpu
 
-    write_cycles_chains_to_file(selected_cycles_chains, output_file_path)
-    allo.printInfo()
+    allo.printAndWriteInfo(selected_cycles_chains, output_file_path)
 
 
 def cycleLP(allo, init_time_model_cpu, objective_index):
@@ -292,21 +288,3 @@ def cycleILP(allo, init_time_model_cpu, objective_index):
     except Exception as e:
         print("Exception during optimization:", e)
         return -1, []
-
-
-def write_cycles_chains_to_file(
-    selected_cycles_chains, filename="selected_cycles_chains.txt"
-):
-    with open(filename, "w") as f:
-        for idx, cc in enumerate(selected_cycles_chains):
-            f.write(f"{idx + 1}:\n")
-            if cc.isChain:
-                f.write("Type: Chain\n")
-            else:
-                f.write("Type: Cycle\n")
-            f.write(f"Size: {len(cc.idX)}\n")
-            f.write(f"Nodes: {', '.join(map(str, cc.idX))}\n")
-            f.write(f"Number of Back Arcs: {cc.nbBA}\n")
-            f.write(f"Score: {cc.score}\n")
-            f.write("\n")
-    print(f"Selected cycles and chains have been written to {filename}")
