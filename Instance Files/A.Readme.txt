@@ -1,0 +1,42 @@
+File Naming:
+
+Instances differ in several ways, shown in the filenames. These filenames are formatted as follows
+
+[NAME] - [SIZE] - [NDD_FLAG] - [Arc Weights] - [Instance_ID]
+
+[NAME]
+- "Delorme" and "Saidman" files are based on the generator found at https://wpettersson.github.io/kidney-webapp/#/generator. These mimic actual KEP instances, based on the papers
+	- Improved instance generation for kidney exchange programmes, Delorme et al. 2022, Computers & Operations Research
+	- Increasing the Opportunity of Live Kidney Donation by Matching for Two- and Three-Way Exchanges, Saidman et al. 2005, Transplantation
+  You can read these papers for more details on the generation procedure.
+- "RandomSparse" assume a uniform chance that arcs are present between any two pairs.
+
+[SIZE]
+- The total number of pairs and NDDs in the instance.
+
+[NDD_Flag]
+- Either NDD or NoNDD. Indicates whether non-directed donors are present in the instance.
+
+[Arc Weights]
+- Either "Unit", if each arc has the same value, or "Weight", in which case each transplant has a weight between 0 and 100.
+
+
+
+File Format:
+- Headers, showing the number of pairs, number of non-directed donors and total number of arcs in the instance.
+- One line per pair or NDD. 
+	- Format [ID] - [NDD Flag] - [Donor Blood Type] - [Patient Blood Type] - [Patient vPRA]
+	- [ID]
+	- [NDD Flag]: 0 if it concerns a pair, 1 if the line is an NDD.
+	- [Donor Blood Type]: 0 for blood type 0, 1 for A, 2 for B, 3 for AB
+	- [Patient Blood Type]: 0 for blood type 0, 1 for A, 2 for B, 3 for AB
+	- [Patient vPRA]: 0 for vPRA below 0.5, 1 for vPRA between 0.5 and 0.85, 2 or vPRA above 0.85.
+
+Note that this list is ordered such that the NDDs are always at the end of the pair/NDD list. (Patient Blood Type and Patient vPRA are given for NDDs, but are irrelevant)
+
+(vPRA is a measure for the percentage of blood-type compatible donors that are incompatible with the patient for other reasons. The higher the vPRA, the less likely the patient is 
+to be compatible).
+
+- One line per arc
+	- Format ([Donor pair ID] - [Patient pair ID]),1,[Weight]
+	

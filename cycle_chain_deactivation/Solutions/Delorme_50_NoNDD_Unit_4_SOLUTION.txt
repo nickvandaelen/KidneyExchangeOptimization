@@ -1,0 +1,26 @@
+Solution:
+1:
+Type: Cycle
+Size: 2
+Nodes: 37, 41
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+Total score: 2
+
+Optimization information:
+Total Time (s): 0.003428936004638672
+Initialization Time (s): 0.0008821487426757812
+CycleLP Time (s): 0.002391815185546875
+Cycle Deactivation Time (s): 9.5367431640625e-07
+Other Time (s): 9.5367431640625e-07
+Final Optimization Time (s): 1.1920928955078125e-06
+Post-Processing Time (s): 0.00015091896057128906
+Objective 1 (Max. Cycles and Chains): 2
+Objective 2 (Min. Cycles and Chains of Size 4): 0
+Objective 3 (Min. Cycles Chains of Size 3): 0
+Objective 4 (Max. Number of Backarcs): 0
+Objective 5 (Max. Total Score/Weight): 2
+Number of Variables: 1
+Number of Constraints: 6
+Number of Non-Zeros: 3
