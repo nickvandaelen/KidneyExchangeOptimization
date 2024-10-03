@@ -1,0 +1,1773 @@
+Solution:
+1:
+Type: Cycle
+Size: 2
+Nodes: 0, 256
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+2:
+Type: Cycle
+Size: 2
+Nodes: 2, 105
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+3:
+Type: Cycle
+Size: 2
+Nodes: 3, 384
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+4:
+Type: Cycle
+Size: 2
+Nodes: 4, 258
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+5:
+Type: Cycle
+Size: 2
+Nodes: 5, 417
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+6:
+Type: Cycle
+Size: 2
+Nodes: 6, 216
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+7:
+Type: Cycle
+Size: 2
+Nodes: 8, 48
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+8:
+Type: Cycle
+Size: 2
+Nodes: 9, 411
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+9:
+Type: Cycle
+Size: 2
+Nodes: 10, 217
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+10:
+Type: Cycle
+Size: 2
+Nodes: 11, 224
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+11:
+Type: Cycle
+Size: 2
+Nodes: 12, 290
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+12:
+Type: Cycle
+Size: 2
+Nodes: 13, 389
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+13:
+Type: Cycle
+Size: 2
+Nodes: 14, 374
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+14:
+Type: Cycle
+Size: 2
+Nodes: 15, 221
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+15:
+Type: Cycle
+Size: 2
+Nodes: 16, 310
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+16:
+Type: Cycle
+Size: 2
+Nodes: 17, 66
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+17:
+Type: Cycle
+Size: 2
+Nodes: 18, 461
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+18:
+Type: Cycle
+Size: 2
+Nodes: 19, 139
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+19:
+Type: Cycle
+Size: 2
+Nodes: 20, 351
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+20:
+Type: Cycle
+Size: 2
+Nodes: 21, 327
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+21:
+Type: Cycle
+Size: 2
+Nodes: 22, 252
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+22:
+Type: Cycle
+Size: 2
+Nodes: 23, 376
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+23:
+Type: Cycle
+Size: 2
+Nodes: 24, 306
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+24:
+Type: Cycle
+Size: 2
+Nodes: 25, 138
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+25:
+Type: Cycle
+Size: 2
+Nodes: 26, 56
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+26:
+Type: Cycle
+Size: 2
+Nodes: 27, 447
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+27:
+Type: Cycle
+Size: 2
+Nodes: 28, 227
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+28:
+Type: Cycle
+Size: 2
+Nodes: 29, 392
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+29:
+Type: Cycle
+Size: 2
+Nodes: 30, 173
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+30:
+Type: Cycle
+Size: 2
+Nodes: 31, 106
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+31:
+Type: Cycle
+Size: 2
+Nodes: 32, 74
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+32:
+Type: Cycle
+Size: 2
+Nodes: 33, 122
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+33:
+Type: Cycle
+Size: 2
+Nodes: 34, 163
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+34:
+Type: Cycle
+Size: 2
+Nodes: 36, 140
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+35:
+Type: Cycle
+Size: 2
+Nodes: 37, 223
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+36:
+Type: Cycle
+Size: 2
+Nodes: 38, 108
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+37:
+Type: Cycle
+Size: 2
+Nodes: 39, 203
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+38:
+Type: Cycle
+Size: 2
+Nodes: 40, 260
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+39:
+Type: Cycle
+Size: 2
+Nodes: 41, 87
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+40:
+Type: Cycle
+Size: 2
+Nodes: 42, 287
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+41:
+Type: Cycle
+Size: 2
+Nodes: 43, 192
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+42:
+Type: Cycle
+Size: 2
+Nodes: 45, 421
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+43:
+Type: Cycle
+Size: 2
+Nodes: 46, 312
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+44:
+Type: Cycle
+Size: 2
+Nodes: 47, 52
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+45:
+Type: Cycle
+Size: 2
+Nodes: 49, 316
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+46:
+Type: Cycle
+Size: 2
+Nodes: 50, 69
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+47:
+Type: Cycle
+Size: 2
+Nodes: 51, 242
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+48:
+Type: Cycle
+Size: 2
+Nodes: 53, 379
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+49:
+Type: Cycle
+Size: 2
+Nodes: 54, 174
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+50:
+Type: Cycle
+Size: 2
+Nodes: 55, 340
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+51:
+Type: Cycle
+Size: 2
+Nodes: 57, 158
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+52:
+Type: Cycle
+Size: 2
+Nodes: 58, 267
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+53:
+Type: Cycle
+Size: 2
+Nodes: 59, 387
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+54:
+Type: Cycle
+Size: 2
+Nodes: 60, 239
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+55:
+Type: Cycle
+Size: 2
+Nodes: 61, 446
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+56:
+Type: Cycle
+Size: 2
+Nodes: 62, 73
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+57:
+Type: Cycle
+Size: 2
+Nodes: 64, 150
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+58:
+Type: Cycle
+Size: 2
+Nodes: 65, 409
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+59:
+Type: Cycle
+Size: 2
+Nodes: 67, 279
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+60:
+Type: Cycle
+Size: 2
+Nodes: 68, 297
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+61:
+Type: Cycle
+Size: 2
+Nodes: 70, 432
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+62:
+Type: Cycle
+Size: 2
+Nodes: 71, 295
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+63:
+Type: Cycle
+Size: 2
+Nodes: 72, 103
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+64:
+Type: Cycle
+Size: 2
+Nodes: 75, 136
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+65:
+Type: Cycle
+Size: 2
+Nodes: 76, 170
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+66:
+Type: Cycle
+Size: 2
+Nodes: 77, 448
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+67:
+Type: Cycle
+Size: 2
+Nodes: 78, 410
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+68:
+Type: Cycle
+Size: 2
+Nodes: 79, 383
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+69:
+Type: Cycle
+Size: 2
+Nodes: 80, 403
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+70:
+Type: Cycle
+Size: 2
+Nodes: 81, 314
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+71:
+Type: Cycle
+Size: 2
+Nodes: 82, 134
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+72:
+Type: Cycle
+Size: 2
+Nodes: 83, 370
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+73:
+Type: Cycle
+Size: 2
+Nodes: 84, 366
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+74:
+Type: Cycle
+Size: 2
+Nodes: 85, 145
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+75:
+Type: Cycle
+Size: 2
+Nodes: 86, 300
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+76:
+Type: Cycle
+Size: 2
+Nodes: 88, 426
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+77:
+Type: Cycle
+Size: 2
+Nodes: 90, 143
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+78:
+Type: Cycle
+Size: 2
+Nodes: 91, 334
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+79:
+Type: Cycle
+Size: 2
+Nodes: 92, 438
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+80:
+Type: Cycle
+Size: 2
+Nodes: 93, 419
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+81:
+Type: Cycle
+Size: 2
+Nodes: 94, 323
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+82:
+Type: Cycle
+Size: 2
+Nodes: 95, 307
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+83:
+Type: Cycle
+Size: 2
+Nodes: 96, 388
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+84:
+Type: Cycle
+Size: 2
+Nodes: 97, 268
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+85:
+Type: Cycle
+Size: 2
+Nodes: 98, 184
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+86:
+Type: Cycle
+Size: 2
+Nodes: 99, 455
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+87:
+Type: Cycle
+Size: 2
+Nodes: 100, 322
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+88:
+Type: Cycle
+Size: 2
+Nodes: 101, 153
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+89:
+Type: Cycle
+Size: 2
+Nodes: 102, 128
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+90:
+Type: Cycle
+Size: 2
+Nodes: 104, 425
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+91:
+Type: Cycle
+Size: 2
+Nodes: 107, 353
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+92:
+Type: Cycle
+Size: 2
+Nodes: 109, 225
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+93:
+Type: Cycle
+Size: 2
+Nodes: 110, 126
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+94:
+Type: Cycle
+Size: 2
+Nodes: 111, 191
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+95:
+Type: Cycle
+Size: 2
+Nodes: 112, 299
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+96:
+Type: Cycle
+Size: 2
+Nodes: 113, 228
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+97:
+Type: Cycle
+Size: 2
+Nodes: 114, 200
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+98:
+Type: Cycle
+Size: 2
+Nodes: 115, 344
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+99:
+Type: Cycle
+Size: 2
+Nodes: 116, 305
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+100:
+Type: Cycle
+Size: 2
+Nodes: 117, 162
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+101:
+Type: Cycle
+Size: 2
+Nodes: 118, 164
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+102:
+Type: Cycle
+Size: 2
+Nodes: 119, 178
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+103:
+Type: Cycle
+Size: 2
+Nodes: 120, 171
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+104:
+Type: Cycle
+Size: 2
+Nodes: 121, 301
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+105:
+Type: Cycle
+Size: 2
+Nodes: 123, 369
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+106:
+Type: Cycle
+Size: 2
+Nodes: 124, 355
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+107:
+Type: Cycle
+Size: 2
+Nodes: 125, 360
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+108:
+Type: Cycle
+Size: 2
+Nodes: 127, 272
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+109:
+Type: Cycle
+Size: 2
+Nodes: 129, 298
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+110:
+Type: Cycle
+Size: 2
+Nodes: 130, 378
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+111:
+Type: Cycle
+Size: 2
+Nodes: 131, 464
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+112:
+Type: Cycle
+Size: 2
+Nodes: 132, 213
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+113:
+Type: Cycle
+Size: 2
+Nodes: 133, 238
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+114:
+Type: Cycle
+Size: 2
+Nodes: 135, 462
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+115:
+Type: Cycle
+Size: 2
+Nodes: 137, 209
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+116:
+Type: Cycle
+Size: 2
+Nodes: 141, 142
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+117:
+Type: Cycle
+Size: 2
+Nodes: 144, 445
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+118:
+Type: Cycle
+Size: 2
+Nodes: 146, 269
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+119:
+Type: Cycle
+Size: 2
+Nodes: 147, 335
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+120:
+Type: Cycle
+Size: 2
+Nodes: 148, 407
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+121:
+Type: Cycle
+Size: 2
+Nodes: 149, 450
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+122:
+Type: Cycle
+Size: 2
+Nodes: 151, 186
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+123:
+Type: Cycle
+Size: 2
+Nodes: 152, 230
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+124:
+Type: Cycle
+Size: 2
+Nodes: 154, 190
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+125:
+Type: Cycle
+Size: 2
+Nodes: 155, 325
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+126:
+Type: Cycle
+Size: 2
+Nodes: 156, 288
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+127:
+Type: Cycle
+Size: 2
+Nodes: 157, 405
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+128:
+Type: Cycle
+Size: 2
+Nodes: 159, 470
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+129:
+Type: Cycle
+Size: 2
+Nodes: 160, 456
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+130:
+Type: Cycle
+Size: 2
+Nodes: 161, 254
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+131:
+Type: Cycle
+Size: 2
+Nodes: 165, 364
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+132:
+Type: Cycle
+Size: 2
+Nodes: 166, 362
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+133:
+Type: Cycle
+Size: 2
+Nodes: 167, 206
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+134:
+Type: Cycle
+Size: 2
+Nodes: 168, 246
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+135:
+Type: Cycle
+Size: 2
+Nodes: 169, 358
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+136:
+Type: Cycle
+Size: 2
+Nodes: 175, 413
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+137:
+Type: Cycle
+Size: 2
+Nodes: 176, 251
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+138:
+Type: Cycle
+Size: 2
+Nodes: 177, 229
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+139:
+Type: Cycle
+Size: 2
+Nodes: 179, 423
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+140:
+Type: Cycle
+Size: 2
+Nodes: 180, 382
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+141:
+Type: Cycle
+Size: 2
+Nodes: 181, 187
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+142:
+Type: Cycle
+Size: 2
+Nodes: 182, 420
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+143:
+Type: Cycle
+Size: 2
+Nodes: 183, 324
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+144:
+Type: Cycle
+Size: 2
+Nodes: 185, 281
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+145:
+Type: Cycle
+Size: 2
+Nodes: 188, 201
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+146:
+Type: Cycle
+Size: 2
+Nodes: 189, 255
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+147:
+Type: Cycle
+Size: 2
+Nodes: 193, 249
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+148:
+Type: Cycle
+Size: 2
+Nodes: 194, 436
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+149:
+Type: Cycle
+Size: 2
+Nodes: 197, 283
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+150:
+Type: Cycle
+Size: 2
+Nodes: 199, 454
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+151:
+Type: Cycle
+Size: 2
+Nodes: 202, 349
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+152:
+Type: Cycle
+Size: 2
+Nodes: 204, 386
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+153:
+Type: Cycle
+Size: 2
+Nodes: 207, 292
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+154:
+Type: Cycle
+Size: 2
+Nodes: 208, 233
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+155:
+Type: Cycle
+Size: 2
+Nodes: 210, 444
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+156:
+Type: Cycle
+Size: 2
+Nodes: 211, 457
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+157:
+Type: Cycle
+Size: 2
+Nodes: 212, 278
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+158:
+Type: Cycle
+Size: 2
+Nodes: 215, 332
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+159:
+Type: Cycle
+Size: 2
+Nodes: 218, 365
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+160:
+Type: Cycle
+Size: 2
+Nodes: 219, 317
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+161:
+Type: Cycle
+Size: 2
+Nodes: 220, 253
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+162:
+Type: Cycle
+Size: 2
+Nodes: 222, 396
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+163:
+Type: Cycle
+Size: 2
+Nodes: 226, 375
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+164:
+Type: Cycle
+Size: 2
+Nodes: 231, 404
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+165:
+Type: Cycle
+Size: 2
+Nodes: 232, 235
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+166:
+Type: Cycle
+Size: 2
+Nodes: 234, 400
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+167:
+Type: Cycle
+Size: 2
+Nodes: 236, 276
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+168:
+Type: Cycle
+Size: 2
+Nodes: 237, 285
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+169:
+Type: Cycle
+Size: 2
+Nodes: 240, 330
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+170:
+Type: Cycle
+Size: 2
+Nodes: 241, 414
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+171:
+Type: Cycle
+Size: 2
+Nodes: 243, 377
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+172:
+Type: Cycle
+Size: 2
+Nodes: 244, 275
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+173:
+Type: Cycle
+Size: 2
+Nodes: 245, 363
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+174:
+Type: Cycle
+Size: 2
+Nodes: 247, 431
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+175:
+Type: Cycle
+Size: 2
+Nodes: 248, 467
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+176:
+Type: Cycle
+Size: 2
+Nodes: 250, 424
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+177:
+Type: Cycle
+Size: 2
+Nodes: 257, 284
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+178:
+Type: Cycle
+Size: 2
+Nodes: 259, 463
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+179:
+Type: Cycle
+Size: 2
+Nodes: 261, 393
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+180:
+Type: Cycle
+Size: 2
+Nodes: 262, 348
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+181:
+Type: Cycle
+Size: 2
+Nodes: 263, 356
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+182:
+Type: Cycle
+Size: 2
+Nodes: 264, 357
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+183:
+Type: Cycle
+Size: 2
+Nodes: 265, 439
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+184:
+Type: Cycle
+Size: 2
+Nodes: 266, 303
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+185:
+Type: Cycle
+Size: 2
+Nodes: 270, 359
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+186:
+Type: Cycle
+Size: 2
+Nodes: 271, 337
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+187:
+Type: Cycle
+Size: 2
+Nodes: 273, 390
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+188:
+Type: Cycle
+Size: 2
+Nodes: 280, 342
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+189:
+Type: Cycle
+Size: 2
+Nodes: 282, 473
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+190:
+Type: Cycle
+Size: 2
+Nodes: 286, 398
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+191:
+Type: Cycle
+Size: 2
+Nodes: 291, 381
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+192:
+Type: Cycle
+Size: 2
+Nodes: 294, 428
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+193:
+Type: Cycle
+Size: 2
+Nodes: 296, 308
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+194:
+Type: Cycle
+Size: 2
+Nodes: 304, 469
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+195:
+Type: Cycle
+Size: 2
+Nodes: 309, 453
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+196:
+Type: Cycle
+Size: 2
+Nodes: 313, 343
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+197:
+Type: Cycle
+Size: 2
+Nodes: 315, 361
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+198:
+Type: Cycle
+Size: 2
+Nodes: 318, 319
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+199:
+Type: Cycle
+Size: 2
+Nodes: 320, 451
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+200:
+Type: Cycle
+Size: 2
+Nodes: 326, 391
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+201:
+Type: Cycle
+Size: 2
+Nodes: 329, 352
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+202:
+Type: Cycle
+Size: 2
+Nodes: 331, 466
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+203:
+Type: Cycle
+Size: 2
+Nodes: 333, 468
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+204:
+Type: Cycle
+Size: 2
+Nodes: 336, 341
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+205:
+Type: Cycle
+Size: 2
+Nodes: 338, 443
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+206:
+Type: Cycle
+Size: 2
+Nodes: 339, 418
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+207:
+Type: Cycle
+Size: 2
+Nodes: 346, 397
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+208:
+Type: Cycle
+Size: 2
+Nodes: 347, 401
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+209:
+Type: Cycle
+Size: 2
+Nodes: 350, 371
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+210:
+Type: Cycle
+Size: 2
+Nodes: 354, 459
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+211:
+Type: Cycle
+Size: 2
+Nodes: 367, 415
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+212:
+Type: Cycle
+Size: 2
+Nodes: 368, 449
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+213:
+Type: Cycle
+Size: 2
+Nodes: 372, 474
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+214:
+Type: Cycle
+Size: 2
+Nodes: 373, 442
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+215:
+Type: Cycle
+Size: 2
+Nodes: 385, 433
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+216:
+Type: Cycle
+Size: 2
+Nodes: 394, 395
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+217:
+Type: Cycle
+Size: 2
+Nodes: 402, 441
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+218:
+Type: Cycle
+Size: 2
+Nodes: 406, 430
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+219:
+Type: Cycle
+Size: 2
+Nodes: 408, 458
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+220:
+Type: Cycle
+Size: 2
+Nodes: 412, 434
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+221:
+Type: Cycle
+Size: 2
+Nodes: 416, 452
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+222:
+Type: Cycle
+Size: 2
+Nodes: 422, 440
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+223:
+Type: Cycle
+Size: 2
+Nodes: 427, 471
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+224:
+Type: Cycle
+Size: 2
+Nodes: 435, 437
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+225:
+Type: Cycle
+Size: 2
+Nodes: 460, 472
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+226:
+Type: Chain
+Size: 2
+Nodes: 475, 205
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+227:
+Type: Chain
+Size: 2
+Nodes: 476, 63
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+228:
+Type: Chain
+Size: 2
+Nodes: 477, 198
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+229:
+Type: Chain
+Size: 2
+Nodes: 478, 345
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+230:
+Type: Chain
+Size: 2
+Nodes: 479, 35
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+231:
+Type: Chain
+Size: 2
+Nodes: 480, 429
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+232:
+Type: Chain
+Size: 2
+Nodes: 481, 277
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+233:
+Type: Chain
+Size: 2
+Nodes: 482, 196
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+234:
+Type: Chain
+Size: 2
+Nodes: 483, 172
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+235:
+Type: Chain
+Size: 2
+Nodes: 484, 195
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+236:
+Type: Chain
+Size: 2
+Nodes: 485, 380
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+237:
+Type: Chain
+Size: 2
+Nodes: 486, 311
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+238:
+Type: Chain
+Size: 2
+Nodes: 487, 302
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+239:
+Type: Chain
+Size: 2
+Nodes: 488, 89
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+240:
+Type: Chain
+Size: 2
+Nodes: 489, 321
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+241:
+Type: Chain
+Size: 2
+Nodes: 490, 293
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+242:
+Type: Chain
+Size: 2
+Nodes: 491, 7
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+243:
+Type: Chain
+Size: 2
+Nodes: 492, 44
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+244:
+Type: Chain
+Size: 2
+Nodes: 493, 289
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+245:
+Type: Chain
+Size: 2
+Nodes: 494, 274
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+246:
+Type: Chain
+Size: 2
+Nodes: 495, 465
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+247:
+Type: Chain
+Size: 2
+Nodes: 496, 399
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+248:
+Type: Chain
+Size: 2
+Nodes: 497, 328
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+249:
+Type: Chain
+Size: 2
+Nodes: 498, 1
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+250:
+Type: Chain
+Size: 2
+Nodes: 499, 214
+Number of Back Arcs: 0
+Score: 1
+-------------------------------------------
+Total score: 475
+
+Optimization information:
+Optimal Solution Found: True
+Total Time (s): 228.3010151386261
+Initialization Time (s): 3.5991759300231934
+CycleLP Time (s): 192.81684517860413
+Cycle Deactivation Time (s): 29.765979766845703
+Other Time (s): 1.2273900508880615
+Final Optimization Time (s): 0.6281969547271729
+Post-Processing Time (s): 0.26342010498046875
+Objective 1 (Max. Cycles and Chains): 500
+Objective 2 (Min. Cycles and Chains of Size 4): 0
+Objective 3 (Min. Cycles Chains of Size 3): 0
+Objective 4 (Max. Number of Backarcs): 0
+Objective 5 (Max. Total Score/Weight): 475
+Number of Variables: 2333
+Number of Constraints: 504
+Number of Non-Zeros: 6974
+CycleLP Failures: 0
+Cycle Deactivation Failures: 0
+Post-Processing Failures: 0

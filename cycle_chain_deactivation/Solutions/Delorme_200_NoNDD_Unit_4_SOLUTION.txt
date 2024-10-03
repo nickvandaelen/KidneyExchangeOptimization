@@ -1,0 +1,93 @@
+Solution:
+1:
+Type: Cycle
+Size: 2
+Nodes: 3, 148
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+2:
+Type: Cycle
+Size: 3
+Nodes: 11, 128, 188
+Number of Back Arcs: 0
+Score: 3
+-------------------------------------------
+3:
+Type: Cycle
+Size: 3
+Nodes: 12, 166, 113
+Number of Back Arcs: 1
+Score: 3
+-------------------------------------------
+4:
+Type: Cycle
+Size: 2
+Nodes: 21, 44
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+5:
+Type: Cycle
+Size: 3
+Nodes: 26, 50, 191
+Number of Back Arcs: 1
+Score: 3
+-------------------------------------------
+6:
+Type: Cycle
+Size: 2
+Nodes: 32, 41
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+7:
+Type: Cycle
+Size: 3
+Nodes: 35, 56, 141
+Number of Back Arcs: 1
+Score: 3
+-------------------------------------------
+8:
+Type: Cycle
+Size: 2
+Nodes: 54, 84
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+9:
+Type: Cycle
+Size: 3
+Nodes: 59, 161, 61
+Number of Back Arcs: 0
+Score: 3
+-------------------------------------------
+10:
+Type: Cycle
+Size: 3
+Nodes: 76, 157, 96
+Number of Back Arcs: 1
+Score: 3
+-------------------------------------------
+Total score: 26
+
+Optimization information:
+Optimal Solution Found: True
+Total Time (s): 0.06745696067810059
+Initialization Time (s): 0.03848695755004883
+CycleLP Time (s): 0.02278900146484375
+Cycle Deactivation Time (s): 0.0014011859893798828
+Other Time (s): 0.0015437602996826172
+Final Optimization Time (s): 0.0020360946655273438
+Post-Processing Time (s): 0.0011980533599853516
+Objective 1 (Max. Cycles and Chains): 26
+Objective 2 (Min. Cycles and Chains of Size 4): 0
+Objective 3 (Min. Cycles Chains of Size 3): 6
+Objective 4 (Max. Number of Backarcs): 4
+Objective 5 (Max. Total Score/Weight): 26
+Number of Variables: 47
+Number of Constraints: 44
+Number of Non-Zeros: 255
+CycleLP Failures: 0
+Cycle Deactivation Failures: 0
+Post-Processing Failures: 0

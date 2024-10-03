@@ -1,0 +1,23 @@
+Solution:
+Total score: 0
+
+Optimization information:
+Optimal Solution Found: True
+Total Time (s): 21.665065050125122
+Initialization Time (s): 1.345519781112671
+CycleLP Time (s): 14.684576034545898
+Cycle Deactivation Time (s): 4.3563151359558105
+Other Time (s): 0.6883008480072021
+Final Optimization Time (s): 0.3860151767730713
+Post-Processing Time (s): 0.2043299674987793
+Objective 1 (Max. Cycles and Chains): 125
+Objective 2 (Min. Cycles and Chains of Size 4): 0
+Objective 3 (Min. Cycles Chains of Size 3): -1
+Objective 4 (Max. Number of Backarcs): -1
+Objective 5 (Max. Total Score/Weight): None
+Number of Variables: 26392
+Number of Constraints: 200
+Number of Non-Zeros: 104550
+CycleLP Failures: 0
+Cycle Deactivation Failures: 0
+Post-Processing Failures: 0

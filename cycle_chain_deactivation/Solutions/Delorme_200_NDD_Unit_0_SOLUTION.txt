@@ -1,0 +1,149 @@
+Solution:
+1:
+Type: Cycle
+Size: 3
+Nodes: 5, 54, 53
+Number of Back Arcs: 2
+Score: 3
+-------------------------------------------
+2:
+Type: Cycle
+Size: 3
+Nodes: 20, 45, 142
+Number of Back Arcs: 1
+Score: 3
+-------------------------------------------
+3:
+Type: Cycle
+Size: 3
+Nodes: 22, 121, 141
+Number of Back Arcs: 1
+Score: 3
+-------------------------------------------
+4:
+Type: Cycle
+Size: 3
+Nodes: 27, 83, 85
+Number of Back Arcs: 2
+Score: 3
+-------------------------------------------
+5:
+Type: Cycle
+Size: 3
+Nodes: 34, 79, 77
+Number of Back Arcs: 1
+Score: 3
+-------------------------------------------
+6:
+Type: Cycle
+Size: 3
+Nodes: 72, 93, 182
+Number of Back Arcs: 0
+Score: 3
+-------------------------------------------
+7:
+Type: Cycle
+Size: 3
+Nodes: 132, 157, 154
+Number of Back Arcs: 0
+Score: 3
+-------------------------------------------
+8:
+Type: Cycle
+Size: 2
+Nodes: 140, 145
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+9:
+Type: Chain
+Size: 4
+Nodes: 190, 78, 167, 114
+Number of Back Arcs: 3
+Score: 3
+-------------------------------------------
+10:
+Type: Chain
+Size: 3
+Nodes: 191, 76, 8
+Number of Back Arcs: 0
+Score: 2
+-------------------------------------------
+11:
+Type: Chain
+Size: 4
+Nodes: 192, 63, 138, 120
+Number of Back Arcs: 3
+Score: 3
+-------------------------------------------
+12:
+Type: Chain
+Size: 4
+Nodes: 193, 153, 155, 69
+Number of Back Arcs: 1
+Score: 3
+-------------------------------------------
+13:
+Type: Chain
+Size: 4
+Nodes: 194, 159, 185, 24
+Number of Back Arcs: 2
+Score: 3
+-------------------------------------------
+14:
+Type: Chain
+Size: 4
+Nodes: 195, 134, 95, 118
+Number of Back Arcs: 2
+Score: 3
+-------------------------------------------
+15:
+Type: Chain
+Size: 4
+Nodes: 196, 105, 58, 97
+Number of Back Arcs: 2
+Score: 3
+-------------------------------------------
+16:
+Type: Chain
+Size: 3
+Nodes: 197, 50, 123
+Number of Back Arcs: 1
+Score: 2
+-------------------------------------------
+17:
+Type: Chain
+Size: 4
+Nodes: 198, 175, 73, 35
+Number of Back Arcs: 1
+Score: 3
+-------------------------------------------
+18:
+Type: Chain
+Size: 4
+Nodes: 199, 90, 49, 2
+Number of Back Arcs: 1
+Score: 3
+-------------------------------------------
+Total score: 51
+
+Optimization information:
+Optimal Solution Found: True
+Total Time (s): 0.6520242691040039
+Initialization Time (s): 0.0753469467163086
+CycleLP Time (s): 0.27921628952026367
+Cycle Deactivation Time (s): 0.10379862785339355
+Other Time (s): 0.1081852912902832
+Final Optimization Time (s): 0.06128406524658203
+Post-Processing Time (s): 0.024187803268432617
+Objective 1 (Max. Cycles and Chains): 61
+Objective 2 (Min. Cycles and Chains of Size 4): 8
+Objective 3 (Min. Cycles Chains of Size 3): 9
+Objective 4 (Max. Number of Backarcs): 23
+Objective 5 (Max. Total Score/Weight): 51
+Number of Variables: 1083
+Number of Constraints: 123
+Number of Non-Zeros: 7422
+CycleLP Failures: 0
+Cycle Deactivation Failures: 0
+Post-Processing Failures: 0

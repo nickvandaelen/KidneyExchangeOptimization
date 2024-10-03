@@ -1,0 +1,107 @@
+Solution:
+1:
+Type: Cycle
+Size: 2
+Nodes: 4, 37
+Number of Back Arcs: 0
+Score: 48
+-------------------------------------------
+2:
+Type: Cycle
+Size: 3
+Nodes: 6, 15, 12
+Number of Back Arcs: 1
+Score: 181
+-------------------------------------------
+3:
+Type: Cycle
+Size: 3
+Nodes: 7, 13, 46
+Number of Back Arcs: 1
+Score: 174
+-------------------------------------------
+4:
+Type: Cycle
+Size: 2
+Nodes: 9, 27
+Number of Back Arcs: 0
+Score: 85
+-------------------------------------------
+5:
+Type: Cycle
+Size: 3
+Nodes: 11, 24, 43
+Number of Back Arcs: 2
+Score: 229
+-------------------------------------------
+6:
+Type: Cycle
+Size: 3
+Nodes: 14, 30, 40
+Number of Back Arcs: 1
+Score: 225
+-------------------------------------------
+7:
+Type: Cycle
+Size: 2
+Nodes: 16, 45
+Number of Back Arcs: 0
+Score: 99
+-------------------------------------------
+8:
+Type: Cycle
+Size: 3
+Nodes: 23, 31, 39
+Number of Back Arcs: 0
+Score: 174
+-------------------------------------------
+9:
+Type: Cycle
+Size: 3
+Nodes: 28, 44, 35
+Number of Back Arcs: 1
+Score: 216
+-------------------------------------------
+10:
+Type: Cycle
+Size: 3
+Nodes: 29, 41, 36
+Number of Back Arcs: 1
+Score: 207
+-------------------------------------------
+11:
+Type: Chain
+Size: 1
+Nodes: 48
+Number of Back Arcs: 0
+Score: 0
+-------------------------------------------
+12:
+Type: Chain
+Size: 4
+Nodes: 49, 5, 19, 38
+Number of Back Arcs: 2
+Score: 177
+-------------------------------------------
+Total score: 1815
+
+Optimization information:
+Optimal Solution Found: True
+Total Time (s): 0.138092041015625
+Initialization Time (s): 0.00884389877319336
+CycleLP Time (s): 0.08591699600219727
+Cycle Deactivation Time (s): 0.013746023178100586
+Other Time (s): 0.01264500617980957
+Final Optimization Time (s): 0.010641813278198242
+Post-Processing Time (s): 0.006295204162597656
+Objective 1 (Max. Cycles and Chains): 32
+Objective 2 (Min. Cycles and Chains of Size 4): 1
+Objective 3 (Min. Cycles Chains of Size 3): 7
+Objective 4 (Max. Number of Backarcs): 9
+Objective 5 (Max. Total Score/Weight): 1815
+Number of Variables: 287
+Number of Constraints: 51
+Number of Non-Zeros: 1796
+CycleLP Failures: 0
+Cycle Deactivation Failures: 0
+Post-Processing Failures: 0

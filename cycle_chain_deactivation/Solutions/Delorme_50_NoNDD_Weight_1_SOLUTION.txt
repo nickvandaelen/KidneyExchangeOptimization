@@ -1,0 +1,30 @@
+Solution:
+1:
+Type: Cycle
+Size: 3
+Nodes: 20, 33, 23
+Number of Back Arcs: 1
+Score: 142
+-------------------------------------------
+Total score: 142
+
+Optimization information:
+Optimal Solution Found: True
+Total Time (s): 0.025352001190185547
+Initialization Time (s): 0.0009191036224365234
+CycleLP Time (s): 0.022370100021362305
+Cycle Deactivation Time (s): 0.0006279945373535156
+Other Time (s): 0.0006058216094970703
+Final Optimization Time (s): 0.0005490779876708984
+Post-Processing Time (s): 0.0002777576446533203
+Objective 1 (Max. Cycles and Chains): 3
+Objective 2 (Min. Cycles and Chains of Size 4): 0
+Objective 3 (Min. Cycles Chains of Size 3): 1
+Objective 4 (Max. Number of Backarcs): 1
+Objective 5 (Max. Total Score/Weight): 142
+Number of Variables: 4
+Number of Constraints: 8
+Number of Non-Zeros: 18
+CycleLP Failures: 0
+Cycle Deactivation Failures: 0
+Post-Processing Failures: 0
