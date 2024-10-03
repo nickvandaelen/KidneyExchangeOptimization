@@ -1,8 +1,7 @@
+import sys
 import os
 from allocation import Allocation
 from cycle_chain_deactivation import run_cycle_chain_deactivation
-
-FILENAME = "aDelorme_Example_EC1.txt"
 
 
 def import_kidney_data(filepath):
@@ -104,15 +103,14 @@ def import_kidney_data(filepath):
     return data
 
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.dirname(script_dir)
+if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        print("Usage: python3 run.py <input_file> <output_file>")
+        sys.exit(1)
 
-file_path = os.path.join(parent_dir, "Instance Files", FILENAME)
-data = import_kidney_data(file_path)
+    file_path = sys.argv[1]
+    output_file_path = sys.argv[2]
 
-solutions_dir = os.path.join(script_dir, "Solutions")
-os.makedirs(solutions_dir, exist_ok=True)
-output_file = f"{file_path.split('/')[-1].replace('.txt', '')}_SOLUTION.txt"
-output_file_path = os.path.join(solutions_dir, output_file)
+    data = import_kidney_data(file_path)
 
-run_cycle_chain_deactivation(data, output_file_path)
+    run_cycle_chain_deactivation(data, output_file_path)
