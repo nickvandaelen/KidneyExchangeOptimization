@@ -1,0 +1,141 @@
+Selected Cycles:
+1:
+Type: Cycle
+Size: 3
+Nodes: 24, 83, 24
+Score: 156
+-------------------------------------------
+2:
+Type: Cycle
+Size: 3
+Nodes: 68, 37, 68
+Score: 112
+-------------------------------------------
+3:
+Type: Cycle
+Size: 3
+Nodes: 77, 71, 77
+Score: 146
+-------------------------------------------
+4:
+Type: Cycle
+Size: 3
+Nodes: 88, 19, 88
+Score: 13
+-------------------------------------------
+5:
+Type: Cycle
+Size: 3
+Nodes: 93, 130, 93
+Score: 161
+-------------------------------------------
+6:
+Type: Cycle
+Size: 3
+Nodes: 100, 46, 100
+Score: 119
+-------------------------------------------
+7:
+Type: Cycle
+Size: 3
+Nodes: 129, 38, 129
+Score: 44
+-------------------------------------------
+8:
+Type: Cycle
+Size: 3
+Nodes: 134, 159, 134
+Score: 126
+-------------------------------------------
+9:
+Type: Cycle
+Size: 3
+Nodes: 160, 137, 160
+Score: 120
+-------------------------------------------
+10:
+Type: Cycle
+Size: 3
+Nodes: 162, 107, 162
+Score: 62
+-------------------------------------------
+11:
+Type: Cycle
+Size: 3
+Nodes: 186, 173, 186
+Score: 112
+-------------------------------------------
+
+Selected Paths:
+1:
+Type: Chain
+Size: 2
+Nodes: 190, 184
+Score: 88
+-------------------------------------------
+2:
+Type: Chain
+Size: 2
+Nodes: 191, 15
+Score: 75
+-------------------------------------------
+3:
+Type: Chain
+Size: 2
+Nodes: 192, 66
+Score: 88
+-------------------------------------------
+4:
+Type: Chain
+Size: 2
+Nodes: 193, 31
+Score: 60
+-------------------------------------------
+5:
+Type: Chain
+Size: 2
+Nodes: 194, 127
+Score: 88
+-------------------------------------------
+6:
+Type: Chain
+Size: 2
+Nodes: 195, 56
+Score: 89
+-------------------------------------------
+7:
+Type: Chain
+Size: 2
+Nodes: 196, 42
+Score: 87
+-------------------------------------------
+8:
+Type: Chain
+Size: 2
+Nodes: 197, 90
+Score: 69
+-------------------------------------------
+9:
+Type: Chain
+Size: 2
+Nodes: 198, 72
+Score: 54
+-------------------------------------------
+10:
+Type: Chain
+Size: 2
+Nodes: 199, 22
+Score: 81
+-------------------------------------------
+Total score: 1950
+
+Optimization information:
+optimal_solution_found: True
+total_time_s: 0.07296943664550781
+number_of_variables: 414
+number_of_constraints: 200
+number_of_non_zeros: 828
+objective_1_max_cycles_and_chains: 21
+objective_2_min_cycles_and_chains_of_size_4: 0
+objective_3_min_cycles_chains_of_size_3: 0
+objective_4_max_total_score_weight: 1950

@@ -1,0 +1,81 @@
+Selected Cycles:
+1:
+Type: Cycle
+Size: 3
+Nodes: 1, 13, 1
+Score: 175
+-------------------------------------------
+2:
+Type: Cycle
+Size: 3
+Nodes: 4, 48, 4
+Score: 100
+-------------------------------------------
+3:
+Type: Cycle
+Size: 3
+Nodes: 7, 23, 7
+Score: 126
+-------------------------------------------
+4:
+Type: Cycle
+Size: 3
+Nodes: 9, 41, 9
+Score: 107
+-------------------------------------------
+5:
+Type: Cycle
+Size: 3
+Nodes: 10, 20, 10
+Score: 163
+-------------------------------------------
+6:
+Type: Cycle
+Size: 3
+Nodes: 11, 17, 11
+Score: 141
+-------------------------------------------
+7:
+Type: Cycle
+Size: 3
+Nodes: 12, 34, 12
+Score: 140
+-------------------------------------------
+8:
+Type: Cycle
+Size: 3
+Nodes: 19, 6, 19
+Score: 128
+-------------------------------------------
+9:
+Type: Cycle
+Size: 3
+Nodes: 28, 33, 28
+Score: 80
+-------------------------------------------
+10:
+Type: Cycle
+Size: 3
+Nodes: 37, 31, 37
+Score: 63
+-------------------------------------------
+11:
+Type: Cycle
+Size: 3
+Nodes: 40, 42, 40
+Score: 152
+-------------------------------------------
+
+Selected Paths:
+Total score: 1375
+
+Optimization information:
+optimal_solution_found: True
+total_time_s: 0.10103797912597656
+number_of_variables: 28
+number_of_constraints: 50
+number_of_non_zeros: 56
+objective_1_max_cycles_and_chains: 11
+objective_2_min_cycles_and_chains_of_size_4: 0
+objective_3_min_cycles_chains_of_size_3: 0
+objective_4_max_total_score_weight: 1375

@@ -1,0 +1,27 @@
+Selected Cycles:
+1:
+Type: Cycle
+Size: 3
+Nodes: 6, 42, 6
+Score: 162
+-------------------------------------------
+2:
+Type: Cycle
+Size: 3
+Nodes: 25, 9, 25
+Score: 74
+-------------------------------------------
+
+Selected Paths:
+Total score: 236
+
+Optimization information:
+optimal_solution_found: True
+total_time_s: 0.031891822814941406
+number_of_variables: 4
+number_of_constraints: 50
+number_of_non_zeros: 8
+objective_1_max_cycles_and_chains: 2
+objective_2_min_cycles_and_chains_of_size_4: 0
+objective_3_min_cycles_chains_of_size_3: 0
+objective_4_max_total_score_weight: 236

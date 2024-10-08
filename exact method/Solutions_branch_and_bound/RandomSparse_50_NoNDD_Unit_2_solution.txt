@@ -1,0 +1,51 @@
+Selected Cycles:
+1:
+Type: Cycle
+Size: 3
+Nodes: 0, 10, 0
+Score: 2
+-------------------------------------------
+2:
+Type: Cycle
+Size: 3
+Nodes: 18, 20, 18
+Score: 2
+-------------------------------------------
+3:
+Type: Cycle
+Size: 3
+Nodes: 26, 23, 26
+Score: 2
+-------------------------------------------
+4:
+Type: Cycle
+Size: 3
+Nodes: 29, 31, 29
+Score: 2
+-------------------------------------------
+5:
+Type: Cycle
+Size: 3
+Nodes: 40, 48, 40
+Score: 2
+-------------------------------------------
+6:
+Type: Cycle
+Size: 3
+Nodes: 41, 2, 41
+Score: 2
+-------------------------------------------
+
+Selected Paths:
+Total score: 12
+
+Optimization information:
+optimal_solution_found: True
+total_time_s: 0.05462074279785156
+number_of_variables: 26
+number_of_constraints: 50
+number_of_non_zeros: 52
+objective_1_max_cycles_and_chains: 6
+objective_2_min_cycles_and_chains_of_size_4: 0
+objective_3_min_cycles_chains_of_size_3: 0
+objective_4_max_total_score_weight: 12
