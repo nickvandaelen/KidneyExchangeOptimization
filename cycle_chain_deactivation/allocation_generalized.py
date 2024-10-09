@@ -178,7 +178,7 @@ class Allocation:
                 for neighbor in self.adjacencyDict.get(current_node, []):
                     if neighbor == path[0] and len(path) >= 2:
                         if all(node >= path[0] for node in path):
-                            cycle_key = tuple(sorted(path))
+                            cycle_key = tuple(path)
                             if cycle_key not in self.found_cycles:
                                 self.found_cycles.add(cycle_key)
                                 self.add_cycle_chain(path, is_chain=False)
@@ -287,6 +287,16 @@ class Allocation:
         )
 
     def printCyclesChains(self):
+        num_cycles = 0
+        num_chains = 0
+        for cyclechain in self.cyclechains:
+            if cyclechain.isChain == 1:
+                num_chains += 1
+            else:
+                num_cycles += 1
+        print(f"Number of Cycles: {num_cycles}")
+        print(f"Number of Chains: {num_chains}\n")
+
         for cyclechain in self.cyclechains:
             cyclechain_type = "Chain" if cyclechain.isChain == 1 else "Cycle"
 

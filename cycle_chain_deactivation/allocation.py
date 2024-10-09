@@ -40,7 +40,7 @@ class Pair:
 class Info:
     def __init__(self):
         self.opt = False  # boolean for optimal solution flag
-        self.timeCPU = [0.0] * 7 # cpu times for different phases in optimization
+        self.timeCPU = [0.0] * 7  # cpu times for different phases in optimization
         self.LB = 0  # lower bound
         self.UB = 0  # upper bound
         self.contUB = 0.0  # continuous upper bound
@@ -296,6 +296,16 @@ class Allocation:
         print(f"Total number of Cycles and Chains: {len(self.cyclechains)}")
 
     def printCyclesChains(self):
+        num_cycles = 0
+        num_chains = 0
+        for cyclechain in self.cyclechains:
+            if cyclechain.isChain == 1:
+                num_chains += 1
+            else:
+                num_cycles += 1
+        print(f"Number of Cycles: {num_cycles}")
+        print(f"Number of Chains: {num_chains}\n")
+
         for cyclechain in self.cyclechains:
             cyclechain_type = "Chain" if cyclechain.isChain == 1 else "Cycle"
 
