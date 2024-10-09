@@ -1,7 +1,11 @@
 import sys
 import os
-from allocation import Allocation
-from cycle_chain_deactivation import run_cycle_chain_deactivation
+from allocation import Allocation as NormalAllocation
+from allocation_generalized import Allocation as GeneralizedAllocation
+from cycle_chain_deactivation import run_cycle_chain_deactivation as normal_run
+from cycle_chain_deactivation_generalized import (
+    run_cycle_chain_deactivation as generalized_run,
+)
 
 
 def import_kidney_data(filepath):
@@ -104,13 +108,42 @@ def import_kidney_data(filepath):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python3 run.py <input_file> <output_file>")
+    if len(sys.argv) < 3:
+        print(
+            "Usage: python3 run.py <input_file> <output_file> [-g] [-c <max_cycle_length>] [-h <max_chain_length>]"
+        )
         sys.exit(1)
 
     file_path = sys.argv[1]
     output_file_path = sys.argv[2]
 
+    # Set default values for cycle and chain lengths
+    generalized = False
+    max_cycle_length = 3
+    max_chain_length = 4
+
+    # Parse additional arguments for generalized version
+    if "-g" in sys.argv:
+        generalized = True
+        if "-c" in sys.argv:
+            max_cycle_length = int(sys.argv[sys.argv.index("-c") + 1])
+        if "-h" in sys.argv:
+            max_chain_length = int(sys.argv[sys.argv.index("-h") + 1])
+
     data = import_kidney_data(file_path)
 
-    run_cycle_chain_deactivation(data, output_file_path)
+    if generalized:
+        print(
+            f"Running generalized version with max cycle length {max_cycle_length} and max chain length {max_chain_length}..."
+        )
+        generalized_run(
+            data,
+            output_file_path,
+            max_cycle_length=max_cycle_length,
+            max_chain_length=max_chain_length,
+        )
+    else:
+        print(
+            "Running normal version with fixed max cycle length 3 and max chain length 4..."
+        )
+        normal_run(data, output_file_path)
