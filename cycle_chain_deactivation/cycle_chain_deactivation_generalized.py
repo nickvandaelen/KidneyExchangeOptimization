@@ -192,7 +192,7 @@ def cycleLP(allo, start_time, objective_index):
         model.optimize()
 
         # store objective value
-        allo.temporaryObjectiveValues[objective_index] = model.objVal
+        allo.temporaryObjectiveValues[objective_index] = model.ObjVal
 
         # compute reduced costs
         allo.RC = [0] * len(allo.cyclechains)
@@ -241,7 +241,7 @@ def cycleILP(allo, start_time, objective_index):
                     isPatientIdUsed[j] = True
 
                 size = len(allo.cyclechains[i].idX)
-                
+
                 if allo.cyclechains[i].isChain:
                     objFunTransplants += (size - 1) * isCycleUsed[i]
                 else:

@@ -167,7 +167,7 @@ def cycleLP(allo, init_time_model_cpu, objective_index):
         model.optimize()
 
         # store objective value
-        allo.tObjs[objective_index] = model.objVal
+        allo.tObjs[objective_index] = model.ObjVal
 
         # compute reduced costs
         allo.RC = [0] * len(allo.cyclechains)
