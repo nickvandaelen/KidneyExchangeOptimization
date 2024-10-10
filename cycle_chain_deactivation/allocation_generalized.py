@@ -335,17 +335,23 @@ class Allocation:
         info["Number of Non-Zeros"] = self.info.nbNZ
 
         with open(output_file_path, "w") as f:
-            f.write("Solution:\n")
-            for idx, cc in enumerate(selected_cycles_chains):
-                f.write(f"{idx + 1}:\n")
-                f.write(f"Type: {'Chain' if cc.isChain else 'Cycle'}\n")
-                f.write(f"Size: {len(cc.idX)}\n")
-                f.write(f"Nodes: {', '.join(map(str, cc.idX))}\n")
-                f.write(f"Number of Back Arcs: {cc.nbBA}\n")
-                f.write(f"Score: {cc.score}\n")
-                f.write("-------------------------------------------\n")
-            total_score = sum(cc.score for cc in selected_cycles_chains)
-            f.write(f"Total score: {total_score}\n")
+            if not selected_cycles_chains:
+                f.write("No feasible solution found.\n")
+                print("No feasible solution found.")
+            else:
+                f.write("Solution:\n")
+                for idx, cc in enumerate(selected_cycles_chains):
+                    f.write(f"{idx + 1}:\n")
+                    f.write(f"Type: {'Chain' if cc.isChain else 'Cycle'}\n")
+                    f.write(f"Size: {len(cc.idX)}\n")
+                    f.write(f"Nodes: {', '.join(map(str, cc.idX))}\n")
+                    f.write(f"Number of Back Arcs: {cc.nbBA}\n")
+                    f.write(f"Score: {cc.score}\n")
+                    f.write("-------------------------------------------\n")
+                total_score = sum(cc.score for cc in selected_cycles_chains)
+                f.write(f"Total score: {total_score}\n")
+                print(f"Total score: {total_score}")
+
             f.write("\nOptimization information:\n")
 
             for label, value in info.items():
