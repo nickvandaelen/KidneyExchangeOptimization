@@ -140,9 +140,14 @@ def cycleLP(allo, start_time, objective_index):
                 for j in allo.cyclechains[i].idX:
                     isPatientUsed[j] += isCycleUsed[i]
                     isPatientIdUsed[j] = True
-                objFunTransplants += len(allo.cyclechains[i].idX) * isCycleUsed[i]
 
                 size = len(allo.cyclechains[i].idX)
+
+                if allo.cyclechains[i].isChain:
+                    objFunTransplants += (size - 1) * isCycleUsed[i]
+                else:
+                    objFunTransplants += size * isCycleUsed[i]
+
                 if size in objFunSizeDict:
                     objFunSizeDict[size] += isCycleUsed[i]
 
@@ -234,9 +239,14 @@ def cycleILP(allo, start_time, objective_index):
                 for j in allo.cyclechains[i].idX:
                     isPatientUsed[j] += isCycleUsed[i]
                     isPatientIdUsed[j] = True
-                objFunTransplants += len(allo.cyclechains[i].idX) * isCycleUsed[i]
 
                 size = len(allo.cyclechains[i].idX)
+                
+                if allo.cyclechains[i].isChain:
+                    objFunTransplants += (size - 1) * isCycleUsed[i]
+                else:
+                    objFunTransplants += size * isCycleUsed[i]
+
                 if size in objFunSizeDict:
                     objFunSizeDict[size] += isCycleUsed[i]
 

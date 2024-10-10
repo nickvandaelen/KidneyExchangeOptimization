@@ -121,7 +121,10 @@ def cycleLP(allo, init_time_model_cpu, objective_index):
                 for j in allo.cyclechains[i].idX:
                     isPatientUsed[j] += isCycleUsed[i]
                     isPatientIdUsed[j] = True
-                objFun1 += len(allo.cyclechains[i].idX) * isCycleUsed[i]
+                if allo.cyclechains[i].isChain:
+                    objFun1 += (len(allo.cyclechains[i].idX) - 1) * isCycleUsed[i]
+                else:
+                    objFun1 += len(allo.cyclechains[i].idX) * isCycleUsed[i]
                 if len(allo.cyclechains[i].idX) == 4:
                     objFun2 += isCycleUsed[i]
                 if len(allo.cyclechains[i].idX) == 3:
@@ -207,7 +210,10 @@ def cycleILP(allo, init_time_model_cpu, objective_index):
                 for j in allo.cyclechains[i].idX:
                     isPatientUsed[j] += isCycleUsed[i]
                     isPatientIdUsed[j] = True
-                objFun1 += len(allo.cyclechains[i].idX) * isCycleUsed[i]
+                if allo.cyclechains[i].isChain:
+                    objFun1 += (len(allo.cyclechains[i].idX) - 1) * isCycleUsed[i]
+                else:
+                    objFun1 += len(allo.cyclechains[i].idX) * isCycleUsed[i]
                 if len(allo.cyclechains[i].idX) == 4:
                     objFun2 += isCycleUsed[i]
                 if len(allo.cyclechains[i].idX) == 3:
