@@ -313,8 +313,11 @@ class Allocation:
     def printAndWriteInfo(self, selected_cycles_chains, output_file_path):
         info = {
             "Optimal Solution Found": self.info.opt,
+            "Max Cycle Length": self.max_cycle_length,
+            "Max Chain Length": self.max_chain_length,
             "Total Time (s)": self.info.timeCPU[0],
             "Initialization Time (s)": self.info.timeCPU[1],
+            "Total Optimization Time (s)": self.info.timeCPU[2],
         }
 
         # add times and failures for each objective
@@ -324,15 +327,8 @@ class Allocation:
             )
             info[f"Objective {idx + 1} ({obj['name']})"] = obj_value
 
-            time_idx = idx + 2
-            if time_idx < len(self.info.timeCPU):
-                info[f"Objective {idx + 1} Time (s)"] = self.info.timeCPU[time_idx]
-
             fail_count = self.fails[idx] if idx < len(self.fails) else 0
             info[f"Objective {idx + 1} Failures"] = fail_count
-
-        if len(self.info.timeCPU) > len(self.objectives) + 1:
-            info["Final Optimization Time (s)"] = self.info.timeCPU[-1]
 
         info["Number of Variables"] = self.info.nbVar
         info["Number of Constraints"] = self.info.nbCons

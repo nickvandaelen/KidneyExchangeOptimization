@@ -5,7 +5,7 @@ from gurobipy import GRB
 from allocation_generalized import Allocation
 
 EPSILON = 0.001
-TIMEOUT = 1000
+TIMEOUT = 7200
 MAX_ITERATIONS = 2000
 
 
@@ -17,7 +17,8 @@ def run_cycle_chain_deactivation(
     allo = Allocation(max_cycle_length, max_chain_length)
     allo.load(data)
     initialization_time = time.time() - start_time
-    allo.info.timeCPU.append(initialization_time)
+
+    start_optimization_time = time.time()
 
     num_objectives = len(allo.objectives)
     allo.isActivated = [1] * len(allo.cyclechains)
@@ -26,7 +27,6 @@ def run_cycle_chain_deactivation(
     allo.fails = [0] * num_objectives
 
     for i in range(num_objectives - 1):
-        objective_start_time = time.time()
         cycleLP(allo, start_time, i)
         current_obj = allo.objectives[i]
         if current_obj["sense"] == GRB.MAXIMIZE:
@@ -97,16 +97,16 @@ def run_cycle_chain_deactivation(
                 print(f"Reached maximum iterations for objective {i}")
                 break
 
-        objective_time = time.time() - objective_start_time
-        allo.info.timeCPU.append(objective_time)
-
-    final_optimization_start_time = time.time()
     obj_val, selected_cycles_chains = cycleILP(allo, start_time, num_objectives - 1)
-    final_optimization_time = time.time() - final_optimization_start_time
-    allo.info.timeCPU.append(final_optimization_time)
 
-    total_time = time.time() - start_time
-    allo.info.timeCPU.insert(0, total_time)
+    end_time = time.time()
+    total_optimization_time = end_time - start_optimization_time
+    total_time = end_time - start_time
+
+    # store relevant times
+    allo.info.timeCPU.append(total_time)
+    allo.info.timeCPU.append(initialization_time)
+    allo.info.timeCPU.append(total_optimization_time)
 
     allo.printAndWriteInfo(selected_cycles_chains, output_file_path)
 
@@ -212,83 +212,104 @@ def cycleLP(allo, start_time, objective_index):
 
 def cycleILP(allo, start_time, objective_index):
     try:
-        model = gp.Model("cycle")
+        optimalNumTransplants = allo.objectiveValues[0]
 
-        isCycleUsed = [None] * len(allo.cyclechains)
-        isPatientUsed = [gp.LinExpr(0) for _ in range(allo.maxId + 1)]
-        isPatientIdUsed = [False] * (allo.maxId + 1)
+        iteration = 0
+        while True:
+            model = gp.Model("cycleILP")
 
-        # initialize objective functions
-        objFunTransplants = gp.LinExpr(0)
-        objFunBackArcs = gp.LinExpr(0)
-        objFunScore = gp.LinExpr(0)
-        objFunSizeDict = {}
+            isCycleUsed = [None] * len(allo.cyclechains)
+            isPatientUsed = [gp.LinExpr(0) for _ in range(allo.maxId + 1)]
+            isPatientIdUsed = [False] * (allo.maxId + 1)
 
-        max_length = max(allo.max_cycle_length, allo.max_chain_length)
-        for length in range(max_length, 1, -1):
-            objFunSizeDict[length] = gp.LinExpr(0)
+            # initialize objective functions
+            objFunTransplants = gp.LinExpr(0)
+            objFunBackArcs = gp.LinExpr(0)
+            objFunScore = gp.LinExpr(0)
+            objFunSizeDict = {}
 
-        # add variables for activated cycles/chains
-        for i in range(len(allo.cyclechains)):
-            if allo.isActivated[i] == 1:
-                isCycleUsed[i] = model.addVar(lb=0, ub=1, vtype=GRB.BINARY)
+            max_length = max(allo.max_cycle_length, allo.max_chain_length)
+            for length in range(max_length, 1, -1):
+                objFunSizeDict[length] = gp.LinExpr(0)
 
-        # build objective functions and constraints
-        for i in range(len(allo.cyclechains)):
-            if allo.isActivated[i] == 1:
-                for j in allo.cyclechains[i].idX:
-                    isPatientUsed[j] += isCycleUsed[i]
-                    isPatientIdUsed[j] = True
+            # add variables for activated cycles/chains
+            for i in range(len(allo.cyclechains)):
+                if allo.isActivated[i] == 1:
+                    isCycleUsed[i] = model.addVar(lb=0, ub=1, vtype=GRB.BINARY)
 
-                size = len(allo.cyclechains[i].idX)
+            # build objective functions and constraints
+            for i in range(len(allo.cyclechains)):
+                if allo.isActivated[i] == 1:
+                    for j in allo.cyclechains[i].idX:
+                        isPatientUsed[j] += isCycleUsed[i]
+                        isPatientIdUsed[j] = True
 
-                if allo.cyclechains[i].isChain:
-                    objFunTransplants += (size - 1) * isCycleUsed[i]
-                else:
-                    objFunTransplants += size * isCycleUsed[i]
+                    size = len(allo.cyclechains[i].idX)
 
-                if size in objFunSizeDict:
-                    objFunSizeDict[size] += isCycleUsed[i]
+                    if allo.cyclechains[i].isChain:
+                        objFunTransplants += (size - 1) * isCycleUsed[i]
+                    else:
+                        objFunTransplants += size * isCycleUsed[i]
 
-                objFunBackArcs += allo.cyclechains[i].nbBA * isCycleUsed[i]
-                objFunScore += allo.cyclechains[i].score * isCycleUsed[i]
+                    if size in objFunSizeDict:
+                        objFunSizeDict[size] += isCycleUsed[i]
 
-        # each patient can be used at most once
-        for i in range(allo.maxId + 1):
-            if isPatientIdUsed[i]:
-                model.addConstr(isPatientUsed[i] <= 1)
+                    objFunBackArcs += allo.cyclechains[i].nbBA * isCycleUsed[i]
+                    objFunScore += allo.cyclechains[i].score * isCycleUsed[i]
 
-        # add constraints for previous objectives
-        for idx in range(objective_index):
-            prev_obj = allo.objectives[idx]
-            if idx == 0:
-                model.addConstr(objFunTransplants == allo.objectiveValues[idx])
-            elif "size" in prev_obj:
-                model.addConstr(
-                    objFunSizeDict[prev_obj["size"]] == allo.objectiveValues[idx]
+            # each patient can be used at most once
+            for i in range(allo.maxId + 1):
+                if isPatientIdUsed[i]:
+                    model.addConstr(isPatientUsed[i] <= 1)
+
+            # add constraints for previous objectives
+            for idx in range(objective_index):
+                prev_obj = allo.objectives[idx]
+                if idx == 0:
+                    if iteration == 0:
+                        model.addConstr(objFunTransplants == allo.objectiveValues[idx])
+                    else:
+                        # lower optimal number of transplants if no feasible solution with given
+                        # cycle/chain lengths can be found
+                        allo.objectiveValues[idx] -= iteration
+                        model.addConstr(objFunTransplants == allo.objectiveValues[idx])
+                elif "size" in prev_obj:
+                    model.addConstr(
+                        objFunSizeDict[prev_obj["size"]] == allo.objectiveValues[idx]
+                    )
+                elif prev_obj["name"] == "Maximize Number of Back Arcs":
+                    model.addConstr(objFunBackArcs == allo.objectiveValues[idx])
+                elif prev_obj["name"] == "Maximize Total Score/Weight":
+                    model.addConstr(objFunScore == allo.objectiveValues[idx])
+
+            current_objective = allo.objectives[objective_index]
+            # set the current objective
+            if current_objective["name"] == "Maximize Total Transplants":
+                model.setObjective(objFunTransplants, GRB.MAXIMIZE)
+            elif "size" in current_objective:
+                model.setObjective(
+                    objFunSizeDict[current_objective["size"]],
+                    current_objective["sense"],
                 )
-            elif prev_obj["name"] == "Maximize Number of Back Arcs":
-                model.addConstr(objFunBackArcs == allo.objectiveValues[idx])
-            elif prev_obj["name"] == "Maximize Total Score/Weight":
-                model.addConstr(objFunScore == allo.objectiveValues[idx])
+            elif current_objective["name"] == "Maximize Number of Back Arcs":
+                model.setObjective(objFunBackArcs, GRB.MAXIMIZE)
+            elif current_objective["name"] == "Maximize Total Score/Weight":
+                model.setObjective(objFunScore, GRB.MAXIMIZE)
 
-        current_objective = allo.objectives[objective_index]
-        # set the current objective
-        if current_objective["name"] == "Maximize Total Transplants":
-            model.setObjective(objFunTransplants, GRB.MAXIMIZE)
-        elif "size" in current_objective:
-            model.setObjective(
-                objFunSizeDict[current_objective["size"]], current_objective["sense"]
-            )
-        elif current_objective["name"] == "Maximize Number of Back Arcs":
-            model.setObjective(objFunBackArcs, GRB.MAXIMIZE)
-        elif current_objective["name"] == "Maximize Total Score/Weight":
-            model.setObjective(objFunScore, GRB.MAXIMIZE)
+            # Set Gurobi parameters
+            model.setParam("TimeLimit", TIMEOUT - (time.time() - start_time))
+            model.setParam("MIPGap", 0)
+            model.optimize()
 
-        # Set Gurobi parameters
-        model.setParam("TimeLimit", TIMEOUT - (time.time() - start_time))
-        model.setParam("MIPGap", 0)
-        model.optimize()
+            if model.Status != GRB.INFEASIBLE:
+                break
+
+            iteration += 1
+            if iteration > optimalNumTransplants:
+                print(
+                    "No feasible solution found within acceptable number of transplants."
+                )
+                return -1, []
 
         # update allocation information
         allo.info.UB = math.ceil(model.ObjBound - EPSILON)
@@ -318,14 +339,12 @@ def cycleILP(allo, start_time, objective_index):
         for i in range(len(allo.cyclechains)):
             if allo.isActivated[i] == 1 and isCycleUsed[i].X > EPSILON:
                 selected_cycles_chains.append(allo.cyclechains[i])
-                allo.cyclechains[i].print()
 
         return obj_val, selected_cycles_chains
 
     except gp.GurobiError as e:
-        print(f"Error code = {e.errno}")
-        print(e.message)
+        print(f"Gurobi Error: {e}")
         return -1, []
     except Exception as e:
-        print("Exception during optimization:", e)
+        print(f"Exception during optimization: {e}")
         return -1, []
