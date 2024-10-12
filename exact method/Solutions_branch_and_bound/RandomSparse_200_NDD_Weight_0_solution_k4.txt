@@ -98,10 +98,10 @@ Number of transplants: 47
 
 Optimization information:
 optimal_solution_found: True
-total_time_s: 0.0809934139251709
-number_of_variables: 974
-number_of_constraints: 50
-number_of_non_zeros: 3609
+total_time_s: 0.17348432540893555
+number_of_variables: 2688
+number_of_constraints: 1764
+number_of_non_zeros: 13696
 objective_1_max_cycles_and_chains: 15
 objective_2_min_cycles_and_chains_of_size_4: 3
 objective_3_min_cycles_chains_of_size_3: 4
