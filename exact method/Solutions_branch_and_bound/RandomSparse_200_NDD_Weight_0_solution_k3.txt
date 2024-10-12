@@ -92,7 +92,7 @@ Total transplants: 28
 
 Optimization information:
 optimal_solution_found: True
-total_time_s: 0.021358251571655273
+total_time_s: 0.06482768058776855
 number_of_variables: 51
 number_of_constraints: 50
 number_of_non_zeros: 102
