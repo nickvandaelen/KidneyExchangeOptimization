@@ -4,105 +4,87 @@ Selected Cycles:
 1:
 Type: Cycle
 Size: 2
-Nodes: 22, 13, 22
+Nodes: 13, 22, 13
 Score: 110
 -------------------------------------------
 2:
 Type: Cycle
 Size: 2
-Nodes: 28, 16, 28
-Score: 100
+Nodes: 26, 29, 26
+Score: 94
 -------------------------------------------
 3:
 Type: Cycle
-Size: 2
-Nodes: 29, 26, 29
-Score: 94
+Size: 3
+Nodes: 7, 15, 25, 7
+Score: 200
 -------------------------------------------
 4:
 Type: Cycle
-Size: 2
-Nodes: 36, 1, 36
-Score: 120
+Size: 4
+Nodes: 3, 47, 45, 23, 3
+Score: 275
 -------------------------------------------
 5:
 Type: Cycle
-Size: 3
-Nodes: 15, 25, 7, 15
-Score: 200
+Size: 4
+Nodes: 12, 17, 32, 24, 12
+Score: 292
 -------------------------------------------
 6:
 Type: Cycle
-Size: 3
-Nodes: 35, 30, 10, 35
-Score: 133
+Size: 5
+Nodes: 6, 34, 21, 27, 20, 6
+Score: 307
 -------------------------------------------
 7:
 Type: Cycle
-Size: 3
-Nodes: 46, 38, 39, 46
-Score: 134
+Size: 5
+Nodes: 10, 35, 30, 28, 1, 10
+Score: 285
 -------------------------------------------
 8:
 Type: Cycle
-Size: 3
-Nodes: 8, 2, 5, 2, 8
-Score: 273
+Size: 5
+Nodes: 16, 41, 44, 18, 31, 16
+Score: 449
 -------------------------------------------
 9:
 Type: Cycle
-Size: 4
-Nodes: 17, 32, 24, 12, 17
-Score: 292
+Size: 3
+Nodes: 38, 40, 43, 40, 43, 38
+Score: 283
 -------------------------------------------
 10:
 Type: Cycle
-Size: 4
-Nodes: 19, 0, 40, 4, 19
-Score: 239
--------------------------------------------
-11:
-Type: Cycle
-Size: 4
-Nodes: 20, 6, 21, 27, 20
-Score: 255
--------------------------------------------
-12:
-Type: Cycle
-Size: 4
-Nodes: 31, 41, 44, 18, 31
-Score: 333
--------------------------------------------
-13:
-Type: Cycle
-Size: 4
-Nodes: 45, 23, 3, 47, 45
-Score: 275
+Size: 5
+Nodes: 46, 33, 4, 19, 39, 46
+Score: 315
 -------------------------------------------
 
 Selected Paths:
 1:
 Type: Chain
-Size: 3
-Nodes: 48, 14, 34
-Score: 110
+Size: 5
+Nodes: 48, 11, 36, 5, 42
+Score: 234
 -------------------------------------------
 2:
 Type: Chain
-Size: 4
-Nodes: 49, 37, 9, 43
-Score: 128
+Size: 5
+Nodes: 49, 2, 8, 2, 8
+Score: 310
 -------------------------------------------
-Total score: 2796
-Total transplants: 47
+Total score: 3154
+Number of transplants: 48
 
 Optimization information:
 optimal_solution_found: True
-total_time_s: 0.06686973571777344
-number_of_variables: 974
+total_time_s: 0.2643318176269531
+number_of_variables: 4289
 number_of_constraints: 50
-number_of_non_zeros: 3609
-objective_1_max_cycles_and_chains: 15
-objective_2_min_cycles_and_chains_of_size_4: 0
-objective_3_min_cycles_chains_of_size_3: 0
-objective_4_max_total_score_weight: 2796
+number_of_non_zeros: 19835
+objective_1_max_cycles_and_chains: 12
+objective_2_min_cycles_and_chains_of_size_4: 1
+objective_3_min_cycles_chains_of_size_3: 2
+objective_4_max_total_score_weight: 3154
