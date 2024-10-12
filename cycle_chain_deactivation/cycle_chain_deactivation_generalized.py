@@ -27,7 +27,7 @@ def run_cycle_chain_deactivation(
     allo.fails = [0] * num_objectives
 
     for i in range(num_objectives - 1):
-        cycleLP(allo, start_time, i)
+        cycleLP(allo, start_optimization_time, i)
         current_obj = allo.objectives[i]
         if current_obj["sense"] == GRB.MAXIMIZE:
             sol = math.floor(allo.temporaryObjectiveValues[i] + EPSILON)
@@ -37,7 +37,7 @@ def run_cycle_chain_deactivation(
         # deactivation loop
         iteration = 0
         while True:
-            if time.time() - start_time > TIMEOUT:
+            if time.time() - start_optimization_time > TIMEOUT:
                 allo.objectiveValues[i] = -1
                 allo.info.opt = False
                 break
@@ -67,7 +67,7 @@ def run_cycle_chain_deactivation(
                             allo.isActivated[j] = 1
 
             # solve the ILP model for the current objective
-            obj_val, _ = cycleILP(allo, start_time, i)
+            obj_val, _ = cycleILP(allo, start_optimization_time, i)
             print(
                 f"Iteration {iteration}, Objective {i}, Sol = {sol}, ObjVal = {obj_val}"
             )
@@ -85,7 +85,7 @@ def run_cycle_chain_deactivation(
                 break
             else:
                 allo.objectiveValues[i] = sol
-                if time.time() - start_time < TIMEOUT:
+                if time.time() - start_optimization_time < TIMEOUT:
                     allo.fails[i] += 1
                     # adjust sol based on the objective
                     if current_obj["sense"] == GRB.MAXIMIZE:
@@ -97,7 +97,9 @@ def run_cycle_chain_deactivation(
                 print(f"Reached maximum iterations for objective {i}")
                 break
 
-    obj_val, selected_cycles_chains = cycleILP(allo, start_time, num_objectives - 1)
+    obj_val, selected_cycles_chains = cycleILP(
+        allo, start_optimization_time, num_objectives - 1
+    )
     if obj_val == -1:
         print("No feasible solution found in the final optimization.")
         allo.info.opt = False
@@ -115,7 +117,7 @@ def run_cycle_chain_deactivation(
     allo.printAndWriteInfo(selected_cycles_chains, output_file_path)
 
 
-def cycleLP(allo, start_time, objective_index):
+def cycleLP(allo, start_optimization_time, objective_index):
     try:
         model = gp.Model("cycleLP")
 
@@ -191,7 +193,7 @@ def cycleLP(allo, start_time, objective_index):
             model.setObjective(objFunScore, GRB.MAXIMIZE)
 
         # setting Gurobi parameters
-        model.setParam("TimeLimit", TIMEOUT - (time.time() - start_time))
+        model.setParam("TimeLimit", TIMEOUT - (time.time() - start_optimization_time))
         model.setParam("MIPGap", 0)
         model.optimize()
 
@@ -214,7 +216,7 @@ def cycleLP(allo, start_time, objective_index):
         print("Exception during optimization:", e)
 
 
-def cycleILP(allo, start_time, objective_index):
+def cycleILP(allo, start_optimization_time, objective_index):
     try:
         model = gp.Model("cycleILP")
 
@@ -294,7 +296,7 @@ def cycleILP(allo, start_time, objective_index):
             model.setObjective(objFunScore, GRB.MAXIMIZE)
 
         # set Gurobi parameters
-        model.setParam("TimeLimit", TIMEOUT - (time.time() - start_time))
+        model.setParam("TimeLimit", TIMEOUT - (time.time() - start_optimization_time))
         model.setParam("MIPGap", 0)
         model.optimize()
 
