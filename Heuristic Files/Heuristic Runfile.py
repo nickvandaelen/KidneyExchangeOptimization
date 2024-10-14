@@ -5,7 +5,7 @@ Created on Thu Oct 10 20:41:08 2024
 @author: 18582
 """
 
-## Go all the way to the bottom to run
+
 
 import os
 import time
@@ -403,11 +403,11 @@ def run(file_list, file_location, output_directory):
 
 
 
-# Write list of files we want to run on, and specify which k we want
+#Write list of files we want to run on, and specify which k we want
 # Make file location the address of the data, output directory is where we want the results (.txt) file to be saved
 file_list = ['Delorme_50_NDD_Weight_0.txt', 'Delorme_200_NDD_Weight_0.txt', 'Saidman_50_NDD_Weight_0.txt', 'Saidman_50_NDD_Weight_0.txt', 'Delorme_500_NDD_Weight_0.txt', 'RandomSparse_200_NDD_Weight_0.txt']
 file_location = 'Instance Files//'
-k_list = [3, 4]
+k_list = [3]
 output_directory = "results"
 
 run(file_list, file_location, output_directory)         
