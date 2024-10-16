@@ -4,7 +4,7 @@ This repository contains code and instance files related to kidney exchange opti
 
 ## Table of Contents
 
-1.[Getting Started](#getting-started)
+1.[Getting Started](#getting-started) <br>
 2.[Project Structure](#project-structure)
 
 ## Getting Started
@@ -15,8 +15,10 @@ To get started, clone the repository and set up the necessary dependencies. You 
 
 Clone the repository:
 
-```bash git clone https://github.com/nickvandaelen/KidneyExchangeOptimization.git ```
-```bash cd KidneyExchangeOptimization ```
+```bash 
+git clone https://github.com/nickvandaelen/KidneyExchangeOptimization.git
+cd KidneyExchangeOptimization
+```
 
 ## Project Structure
 
@@ -35,22 +37,33 @@ The repository is structured as follows:
     - `run.py`: Python script to run kidney exchange optimization using normal or generalized methods. It accepts input/output files and options for cycle and chain lengths.
     - `run.sh`: Shell script that automates running instances with options to skip files, use generalized method, and set cycle/chain lengths.
       #### Run a specific instance:
-      ```bash ./run.sh -f Delorme_1000_NDD_Unit_0.txt ```
+      ```bash
+       ./run.sh -f Delorme_1000_NDD_Unit_0.txt
+      ```
       
       #### Run all instances:
-      ```bash ./run.sh -a ```
+      ```bash
+      ./run.sh -a
+      ```
       
       #### Run with generalized version:
-      ```bash ./run.sh -f Delorme_1000_NDD_Unit_0.txt -g -c 4 -h 4 ```
-      
-      ```bash ./run.sh -a -g -c 4 -h 4 ```
+      ```bash
+      ./run.sh -f Delorme_1000_NDD_Unit_0.txt -g -c 4 -h 4
+      ```
+      ```bash
+      ./run.sh -a -g -c 4 -h 4
+      ```
       
       #### Run with skip patterns:
-      ```bash ./run.sh -f Delorme_1000_NDD_Unit_0.txt -g -c 4 -h 4 -s "1000" # skips all files with 1000 nodes ```
-      
-      ```bash ./run.sh -a -g -c 4 -h 4 -s "Saidman" # skips all Saidman files ```
-
-      ```bash ./run.sh -a -g -c 4 -h 4 -s "Delorme_1000" -s "Saidman_500" # skips all Delorme files with 1000 nodes and Saidman files with 500 nodes ```
+      ```bash
+      ./run.sh -f Delorme_1000_NDD_Unit_0.txt -g -c 4 -h 4 -s "1000" # skips all files with 1000 nodes
+      ```
+      ```bash
+      ./run.sh -a -g -c 4 -h 4 -s "Saidman" # skips all Saidman files
+      ```
+      ```bash
+      ./run.sh -a -g -c 4 -h 4 -s "Delorme_1000" -s "Saidman_500" # skips all Delorme files with 1000 nodes and Saidman files with 500 nodes
+      ```
 
 - **Heuristic Methods/**: Contains heuristic algorithms for solving kidney exchange problems.
   - `allocation.py`: Allocation file for heuristics (removed Gurobi aspects).
