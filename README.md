@@ -6,11 +6,6 @@ This repository contains code and instance files related to kidney exchange opti
 
 1. [Project Structure](#project-structure)
 2. [Getting Started](#getting-started)
-3. [Exact Methods](#exact-methods)
-4. [Heuristic Methods](#heuristic-methods)
-5. [Instance Files](#instance-files)
-6. [Usage](#usage)
-7. [License](#license)
 
 ## Project Structure
 
@@ -23,7 +18,7 @@ The repository is structured as follows:
   - `cycle_chain_deactivation/`: Contains Python scripts for solving the KEP using the cycle-chain deactivation method.
     - `allocation.py`: Standard allocation file containing a variety of classes.
     - `allocation_generalized.py`: Generalized allocation file containing variety of classes and functions, including the BFS algorithm for finding cycles and chains.
-    - `cycle_chain_deactivation.py`: Original cycle and chain deactivation algorithm wiyh fixed cycle and chain lengths.
+    - `cycle_chain_deactivation.py`: Original cycle and chain deactivation algorithm with fixed cycle and chain lengths.
     - `cycle_chain_deactivation_generalized.py`: Generalized version of the cycle-chain deactivation algorithm.
     - `run.ipynb`: Jupyter notebook for running cycle-chain deactivation on one file.
     - `run.py`: Python script to run kidney exchange optimization using normal or generalized methods. It accepts input/output files and options for cycle and chain lengths.
@@ -46,5 +41,5 @@ To get started, clone the repository and set up the necessary dependencies. You 
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/KidneyExchangeOptimization.git
+git clone https://github.com/nickvandaelen/KidneyExchangeOptimization.git
 cd KidneyExchangeOptimization
