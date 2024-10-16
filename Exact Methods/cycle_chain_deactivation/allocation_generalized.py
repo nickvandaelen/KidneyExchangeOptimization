@@ -168,16 +168,24 @@ class Allocation:
 
     def find_cycles(self):
         max_length = self.max_cycle_length
-        self.found_cycles = set()
-        for start_node in self.idToIdxP.keys():
+        self.found_cycles = set()  # store unique cycles found
+        for (
+            start_node
+        ) in (
+            self.idToIdxP.keys()
+        ):  # iterate through all pairs (only they can start a cycle)
             stack = [(start_node, [start_node], set([start_node]))]
             while stack:
                 current_node, path, visited = stack.pop()
-                if len(path) > max_length:
+                if len(path) > max_length:  # if cycle exceeds max length, skip
                     continue
-                for neighbor in self.adjacencyDict.get(current_node, []):
-                    if neighbor == path[0] and len(path) >= 2:
-                        if all(node >= path[0] for node in path):
+                for neighbor in self.adjacencyDict.get(
+                    current_node, []
+                ):  # iterate through neighbors
+                    if neighbor == path[0] and len(path) >= 2:  # cycle detected
+                        if all(
+                            node >= path[0] for node in path
+                        ):  # check for cycle order to avoid duplicates
                             cycle_key = tuple(path)
                             if cycle_key not in self.found_cycles:
                                 self.found_cycles.add(cycle_key)
@@ -185,24 +193,28 @@ class Allocation:
                     elif neighbor not in visited:
                         visited.add(neighbor)
                         stack.append((neighbor, path + [neighbor], visited.copy()))
-                        visited.remove(neighbor)
+                        visited.remove(neighbor)  # backtrack
 
     def find_chains(self):
         max_length = self.max_chain_length
-        self.found_chains = set()
-        for ndd in self.NDDs:
+        self.found_chains = set()  # store unique chains found
+        for ndd in self.NDDs:  # iterate through all NDDs (only they can start a chain)
             if max_length >= 1:
                 self.add_cycle_chain([ndd.id], is_chain=True)
 
-            for neighbor in self.adjacencyDict.get(ndd.id, []):
+            for neighbor in self.adjacencyDict.get(
+                ndd.id, []
+            ):  # explore chains from the current ndd
                 stack = [(neighbor, [ndd.id, neighbor], set([neighbor]))]
                 while stack:
                     current_node, path, visited = stack.pop()
                     chain_length = len(path)
-                    if chain_length > max_length:
+                    if chain_length > max_length:  # if chain exceeds max length, skip
                         continue
                     self.add_cycle_chain(path, is_chain=True)
-                    if chain_length < max_length:
+                    if (
+                        chain_length < max_length
+                    ):  # explore further neighbors if within chain limit
                         for next_neighbor in self.adjacencyDict.get(current_node, []):
                             if next_neighbor not in visited:
                                 visited.add(next_neighbor)
@@ -213,7 +225,7 @@ class Allocation:
                                         visited.copy(),
                                     )
                                 )
-                                visited.remove(next_neighbor)
+                                visited.remove(next_neighbor)  # backtrack
 
     def add_cycle_chain(self, nodes, is_chain):
         total_score = 0
@@ -226,7 +238,7 @@ class Allocation:
 
         for i in range(num_arcs):
             from_node = nodes[i]
-            to_node = nodes[(i + 1) % num_nodes]
+            to_node = nodes[(i + 1) % num_nodes]  # wrap-around for cycles
             total_score += self.scoresDict.get((from_node, to_node), 0)
 
             if is_chain:
@@ -251,7 +263,6 @@ class Allocation:
         self.cyclechains.append(cycle_chain)
 
     def generate_objectives(self):
-        # Objective 1: Maximize the total number of transplants
         self.objectives.append(
             {
                 "name": "Maximize Total Transplants",
@@ -259,7 +270,7 @@ class Allocation:
             }
         )
 
-        # Objectives for cycles and chains sizes
+        # objectives for cycles and chains sizes
         max_length = max(self.max_cycle_length, self.max_chain_length)
         for length in range(max_length, 2, -1):
             self.objectives.append(
@@ -270,7 +281,6 @@ class Allocation:
                 }
             )
 
-        # Objective for back arcs
         self.objectives.append(
             {
                 "name": "Maximize Number of Back Arcs",
@@ -278,7 +288,6 @@ class Allocation:
             }
         )
 
-        # Objective for total score
         self.objectives.append(
             {
                 "name": "Maximize Total Score/Weight",

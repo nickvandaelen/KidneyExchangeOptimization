@@ -30,7 +30,7 @@ The repository is structured as follows:
   - `run.py`: Python script to run the full heuristic approach for multiple files.
 
 - **Instance Files/**: Contains input data files for the optimization methods.
-  - Various files representing different kidney exchange instances, with and without non-directed donors (NDDs).
+  - Various files representing different kidney exchange instances.
 
 ## Getting Started
 
