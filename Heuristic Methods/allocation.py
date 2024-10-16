@@ -1,6 +1,3 @@
-#from gurobipy import GRB
-
-
 class NDD:
     def __init__(self, id, blood, nbEdges, targets, scores):
         self.id = id

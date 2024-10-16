@@ -9,7 +9,7 @@ Created on Thu Oct 10 20:41:08 2024
 
 import os
 import time
-from allocation_generalized_nick import Allocation  # Adjust the import
+from allocation import Allocation  # Adjust the import
 import numpy as np
 
 # Set working directory
