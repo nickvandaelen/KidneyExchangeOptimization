@@ -4,8 +4,19 @@ This repository contains code and instance files related to kidney exchange opti
 
 ## Table of Contents
 
-1. [Project Structure](#project-structure)
-2. [Getting Started](#getting-started)
+1.[Getting Started](#getting-started)
+2.[Project Structure](#project-structure)
+
+## Getting Started
+
+To get started, clone the repository and set up the necessary dependencies. You will need Python installed, along with the required libraries specified in the project.
+
+### Installation
+
+Clone the repository:
+
+```bash git clone https://github.com/nickvandaelen/KidneyExchangeOptimization.git ```
+```bash cd KidneyExchangeOptimization ```
 
 ## Project Structure
 
@@ -48,15 +59,3 @@ The repository is structured as follows:
 
 - **Instance Files/**: Contains input data files for the optimization methods.
   - Various files representing different kidney exchange instances.
-
-## Getting Started
-
-To get started, clone the repository and set up the necessary dependencies. You will need Python installed, along with the required libraries specified in the project.
-
-### Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/nickvandaelen/KidneyExchangeOptimization.git
-cd KidneyExchangeOptimization
