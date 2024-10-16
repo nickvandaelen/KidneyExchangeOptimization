@@ -39,6 +39,8 @@ The repository is structured as follows:
       
       ```bash ./run.sh -a -g -c 4 -h 4 -s "Saidman" # skips all Saidman files ```
 
+      ```bash ./run.sh -a -g -c 4 -h 4 -s "Delorme_1000" -s "Saidman_500" # skips all Delorme files with 1000 nodes and Saidman files with 500 nodes ```
+
 - **Heuristic Methods/**: Contains heuristic algorithms for solving kidney exchange problems.
   - `allocation.py`: Allocation file for heuristics (removed Gurobi aspects).
   - `notebook.ipynb`: Jupyter notebook for testing and running heuristic method.
