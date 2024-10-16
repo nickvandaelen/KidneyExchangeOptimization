@@ -5,7 +5,7 @@ Created on Thu Oct 10 20:41:08 2024
 @author: 18582
 """
 
-
+## Go all the way to the bottom to run
 
 import os
 import time
@@ -13,10 +13,10 @@ from allocation_generalized_nick import Allocation  # Adjust the import
 import numpy as np
 
 # Set working directory
-os.chdir(r'C:\Users\Nick\TUE Courses\Optimization\Project')
+os.chdir(r'/Users/Martijn/Downloads/KidneyExchangeOptimization')
 
 # Path to the kidney exchange data file
-filepath = 'Instance Files//Delorme_50_NDD_Weight_0.txt'
+filepath = 'Instance Files/Delorme_50_NDD_Weight_0.txt'
 
 # Function to load kidney exchange data into a dictionary
 def load_kidney_data(filepath):
@@ -403,13 +403,29 @@ def run(file_list, file_location, output_directory):
 
 
 
-#Write list of files we want to run on, and specify which k we want
+# Write list of files we want to run on, and specify which k we want
 # Make file location the address of the data, output directory is where we want the results (.txt) file to be saved
-file_list = ['Delorme_50_NDD_Weight_0.txt', 'Delorme_200_NDD_Weight_0.txt', 'Saidman_50_NDD_Weight_0.txt', 'Saidman_50_NDD_Weight_0.txt', 'Delorme_500_NDD_Weight_0.txt', 'RandomSparse_200_NDD_Weight_0.txt']
-file_location = 'Instance Files//'
+output_directory = "/Users/Martijn/Downloads/KidneyExchangeOptimization/Heuristic Files/results"
+file_location = 'Instance Files/'
+
+file_list_k3 = ['Delorme_50_NDD_Weight_0.txt', "Delorme_200_NDD_Weight_0.txt", "Delorme_500_NDD_Weight_0.txt", "Delorme_1000_NDD_Weight_0.txt",
+                "Saidman_50_NDD_Weight_0.txt", "Saidman_200_NDD_Weight_0.txt",
+                "RandomSparse_200_NDD_Weight_0.txt", "RandomSparse_500_NDD_Weight_0.txt"]
+file_list_k4 = ['Delorme_50_NDD_Weight_0.txt', "Delorme_200_NDD_Weight_0.txt", "Delorme_500_NDD_Weight_0.txt",
+                "Saidman_50_NDD_Weight_0.txt", "Saidman_200_NDD_Weight_0.txt",
+                "RandomSparse_200_NDD_Weight_0.txt"]
+file_list_k5 = ['Delorme_50_NDD_Weight_0.txt', "Delorme_200_NDD_Weight_0.txt",
+                "Saidman_50_NDD_Weight_0.txt"]
+
+
 k_list = [3]
-output_directory = "results"
+print("Running k = 3")
+run(file_list_k3, file_location, output_directory)         
 
-run(file_list, file_location, output_directory)         
+k_list = [4]
+print("Running k = 4")
+run(file_list_k4, file_location, output_directory)  
 
-
+k_list = [5]
+print("Running k = 5")
+run(file_list_k5, file_location, output_directory)  

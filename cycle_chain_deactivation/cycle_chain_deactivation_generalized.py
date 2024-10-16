@@ -5,8 +5,8 @@ from gurobipy import GRB
 from allocation_generalized import Allocation
 
 EPSILON = 0.001
-TIMEOUT = 7200
-MAX_ITERATIONS = 2000
+TIMEOUT = 14400
+MAX_ITERATIONS = 4000
 
 
 def run_cycle_chain_deactivation(

@@ -1,8 +1,8 @@
 Dataset: Saidman_50_NDD_Weight_0.txt
 k = 3
-Cycle Generation Time: 0.027007579803466797
-Solution Time: 0.005001068115234375
-Total Time: 0.03200864791870117
+Cycle Generation Time: 0.049685001373291016
+Solution Time: 0.007035970687866211
+Total Time: 0.05672192573547363
 transplants_made: 19, total_weight: 822
 Selected Cycles:
 [48, 13]

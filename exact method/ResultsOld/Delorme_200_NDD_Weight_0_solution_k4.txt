@@ -1,0 +1,120 @@
+Running with k = 4:
+
+Selected Cycles:
+1:
+Type: Cycle
+Size: 4
+Nodes: 20, 106, 140, 142, 20
+Score: 248
+-------------------------------------------
+2:
+Type: Cycle
+Size: 4
+Nodes: 93, 154, 137, 83, 93
+Score: 222
+-------------------------------------------
+3:
+Type: Cycle
+Size: 4
+Nodes: 145, 138, 132, 157, 145
+Score: 139
+-------------------------------------------
+4:
+Type: Cycle
+Size: 3
+Nodes: 149, 85, 184, 85, 149
+Score: 302
+-------------------------------------------
+5:
+Type: Cycle
+Size: 4
+Nodes: 155, 69, 141, 22, 155
+Score: 238
+-------------------------------------------
+6:
+Type: Cycle
+Size: 3
+Nodes: 168, 79, 62, 79, 168
+Score: 274
+-------------------------------------------
+7:
+Type: Cycle
+Size: 3
+Nodes: 174, 54, 5, 54, 174
+Score: 299
+-------------------------------------------
+8:
+Type: Cycle
+Size: 4
+Nodes: 182, 72, 185, 24, 182
+Score: 238
+-------------------------------------------
+
+Selected Paths:
+1:
+Type: Chain
+Size: 3
+Nodes: 197, 76, 8
+Score: 109
+-------------------------------------------
+2:
+Type: Chain
+Size: 4
+Nodes: 190, 167, 96, 50
+Score: 250
+-------------------------------------------
+3:
+Type: Chain
+Size: 4
+Nodes: 192, 63, 187, 51
+Score: 243
+-------------------------------------------
+4:
+Type: Chain
+Size: 4
+Nodes: 193, 189, 119, 33
+Score: 210
+-------------------------------------------
+5:
+Type: Chain
+Size: 4
+Nodes: 194, 159, 152, 35
+Score: 136
+-------------------------------------------
+6:
+Type: Chain
+Size: 4
+Nodes: 195, 134, 95, 65
+Score: 230
+-------------------------------------------
+7:
+Type: Chain
+Size: 4
+Nodes: 196, 105, 58, 38
+Score: 250
+-------------------------------------------
+8:
+Type: Chain
+Size: 4
+Nodes: 198, 175, 73, 123
+Score: 168
+-------------------------------------------
+9:
+Type: Chain
+Size: 4
+Nodes: 199, 90, 49, 2
+Score: 142
+-------------------------------------------
+Total score: 3698
+Number of transplants: 64
+
+Optimization information:
+optimal_solution_found: True
+total_time_s: 2.0395030975341797
+number_of_variables: 95376
+number_of_constraints: 59389
+number_of_non_zeros: 482389
+objective_1_max_cycles_and_chains: 17
+objective_2_min_cycles_and_chains_of_size_4: 0
+objective_3_min_cycles_chains_of_size_3: 0
+objective_4_max_total_score_weight: 3698

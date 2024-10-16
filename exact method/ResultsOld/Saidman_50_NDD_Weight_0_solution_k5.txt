@@ -1,0 +1,60 @@
+Running with k = 5:
+
+Selected Cycles:
+1:
+Type: Cycle
+Size: 3
+Nodes: 11, 38, 13, 38, 11
+Score: 290
+-------------------------------------------
+2:
+Type: Cycle
+Size: 3
+Nodes: 24, 2, 32, 2, 24
+Score: 303
+-------------------------------------------
+3:
+Type: Cycle
+Size: 4
+Nodes: 29, 35, 26, 40, 35, 29
+Score: 315
+-------------------------------------------
+4:
+Type: Cycle
+Size: 4
+Nodes: 37, 14, 10, 30, 14, 37
+Score: 320
+-------------------------------------------
+5:
+Type: Cycle
+Size: 4
+Nodes: 47, 41, 44, 41, 8, 47
+Score: 366
+-------------------------------------------
+
+Selected Paths:
+1:
+Type: Chain
+Size: 5
+Nodes: 48, 9, 4, 9, 4
+Score: 285
+-------------------------------------------
+2:
+Type: Chain
+Size: 5
+Nodes: 49, 28, 22, 19, 46
+Score: 291
+-------------------------------------------
+Total score: 2170
+Number of transplants: 28
+
+Optimization information:
+optimal_solution_found: True
+total_time_s: 5.872551918029785
+number_of_variables: 441351
+number_of_constraints: 360354
+number_of_non_zeros: 2737986
+objective_1_max_cycles_and_chains: 7
+objective_2_min_cycles_and_chains_of_size_4: 0
+objective_3_min_cycles_chains_of_size_3: 0
+objective_4_max_total_score_weight: 2170

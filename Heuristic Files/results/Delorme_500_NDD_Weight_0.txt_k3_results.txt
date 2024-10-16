@@ -1,8 +1,8 @@
 Dataset: Delorme_500_NDD_Weight_0.txt
 k = 3
-Cycle Generation Time: 4.980958700180054
-Solution Time: 1.163811206817627
-Total Time: 6.144769906997681
+Cycle Generation Time: 2.257460355758667
+Solution Time: 0.5806090831756592
+Total Time: 2.8380701541900635
 transplants_made: 138, total_weight: 6191
 Selected Cycles:
 [484, 431, 116]

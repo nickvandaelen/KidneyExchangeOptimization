@@ -1,8 +1,8 @@
 Dataset: RandomSparse_200_NDD_Weight_0.txt
 k = 3
-Cycle Generation Time: 0.01663947105407715
-Solution Time: 0.0030007362365722656
-Total Time: 0.019640207290649414
+Cycle Generation Time: 0.007894039154052734
+Solution Time: 0.0017459392547607422
+Total Time: 0.009639978408813477
 transplants_made: 38, total_weight: 1668
 Selected Cycles:
 [1, 16, 28, 1]

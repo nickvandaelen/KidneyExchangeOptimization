@@ -1,0 +1,108 @@
+Running with k = 5:
+
+Selected Cycles:
+1:
+Type: Cycle
+Size: 4
+Nodes: 20, 106, 140, 142, 20
+Score: 248
+-------------------------------------------
+2:
+Type: Cycle
+Size: 5
+Nodes: 22, 45, 128, 121, 141, 22
+Score: 260
+-------------------------------------------
+3:
+Type: Cycle
+Size: 3
+Nodes: 52, 93, 154, 52
+Score: 174
+-------------------------------------------
+4:
+Type: Cycle
+Size: 4
+Nodes: 77, 139, 189, 79, 77
+Score: 203
+-------------------------------------------
+5:
+Type: Cycle
+Size: 4
+Nodes: 83, 85, 167, 96, 83
+Score: 275
+-------------------------------------------
+6:
+Type: Cycle
+Size: 4
+Nodes: 132, 157, 145, 138, 132
+Score: 139
+-------------------------------------------
+
+Selected Paths:
+1:
+Type: Chain
+Size: 6
+Nodes: 190, 78, 13, 165, 19, 47
+Score: 284
+-------------------------------------------
+2:
+Type: Chain
+Size: 6
+Nodes: 192, 63, 187, 51, 76, 8
+Score: 368
+-------------------------------------------
+3:
+Type: Chain
+Size: 5
+Nodes: 193, 124, 12, 159, 152
+Score: 284
+-------------------------------------------
+4:
+Type: Chain
+Size: 6
+Nodes: 194, 54, 53, 26, 119, 33
+Score: 316
+-------------------------------------------
+5:
+Type: Chain
+Size: 5
+Nodes: 195, 134, 95, 38, 185
+Score: 304
+-------------------------------------------
+6:
+Type: Chain
+Size: 6
+Nodes: 196, 105, 58, 155, 56, 123
+Score: 409
+-------------------------------------------
+7:
+Type: Chain
+Size: 6
+Nodes: 197, 24, 182, 72, 49, 50
+Score: 323
+-------------------------------------------
+8:
+Type: Chain
+Size: 5
+Nodes: 198, 175, 73, 35, 2
+Score: 280
+-------------------------------------------
+9:
+Type: Chain
+Size: 2
+Nodes: 199, 90
+Score: 52
+-------------------------------------------
+Total score: 3919
+Number of transplants: 71
+
+Optimization information:
+optimal_solution_found: True
+total_time_s: 60.469743967056274
+number_of_variables: 2029949
+number_of_constraints: 55337
+number_of_non_zeros: 11944070
+objective_1_max_cycles_and_chains: 15
+objective_2_min_cycles_and_chains_of_size_4: 1
+objective_3_min_cycles_chains_of_size_3: 0
+objective_4_max_total_score_weight: 3919
