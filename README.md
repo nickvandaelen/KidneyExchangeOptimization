@@ -4,8 +4,8 @@ This repository contains code and instance files related to kidney exchange opti
 
 ## Table of Contents
 
-1.[Getting Started](#getting-started) <br>
-2.[Project Structure](#project-structure)
+1. [Getting Started](#getting-started) <br>
+2. [Project Structure](#project-structure)
 
 ## Getting Started
 
