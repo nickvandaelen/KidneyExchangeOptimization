@@ -23,28 +23,19 @@ The repository is structured as follows:
     - `run.ipynb`: Jupyter notebook for running cycle-chain deactivation on one file.
     - `run.py`: Python script to run kidney exchange optimization using normal or generalized methods. It accepts input/output files and options for cycle and chain lengths.
     - `run.sh`: Shell script that automates running instances with options to skip files, use generalized method, and set cycle/chain lengths.
-      ### Example usage of `run.sh`:
       #### Run a specific instance:
-      \```bash
-      ./run.sh -f Delorme_1000_NDD_Unit_0.txt
-      \```
+      ```bash ./run.sh -f Delorme_1000_NDD_Unit_0.txt ```
       
       #### Run all instances:
-      \```bash
-      ./run.sh -a
-      \```
+      ```bash ./run.sh -a ```
       
       #### Run with generalized version:
-      \```bash
-      ./run.sh -f Delorme_1000_NDD_Unit_0.txt -g -c 4 -h 4
-      ./run.sh -a -g -c 4 -h 4
-      \```
+      ```bash ./run.sh -f Delorme_1000_NDD_Unit_0.txt -g -c 4 -h 4 ```
+      ```bash ./run.sh -a -g -c 4 -h 4 ```
       
       #### Run with skip patterns:
-      \```bash
-      ./run.sh -f Delorme_1000_NDD_Unit_0.txt -g -c 4 -h 4 -s "1000"  # skips all files with 1000 nodes
-      ./run.sh -a -g -c 4 -h 4 -s "Saidman"  # skips all Saidman files
-      \```
+      ```bash ./run.sh -f Delorme_1000_NDD_Unit_0.txt -g -c 4 -h 4 -s "1000" # skips all files with 1000 nodes ```
+      ```bash ./run.sh -a -g -c 4 -h 4 -s "Saidman" # skips all Saidman files ```
 
 - **Heuristic Methods/**: Contains heuristic algorithms for solving kidney exchange problems.
   - `allocation.py`: Allocation file for heuristics (removed Gurobi aspects).
