@@ -2,11 +2,6 @@
 
 This repository contains code and instance files related to kidney exchange optimization problems. It implements different approaches for solving kidney exchange problems, including the branch-and-bound algorithm, cycle-chain deactivation strategies and a variety of heuristic methods.
 
-## Table of Contents
-
-1. [Getting Started](#getting-started) <br>
-2. [Project Structure](#project-structure)
-
 ## Getting Started
 
 To get started, clone the repository and set up the necessary dependencies. You will need Python installed, along with the required libraries specified in the project.
