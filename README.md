@@ -1,6 +1,6 @@
 # Kidney Exchange Optimization - Group 7
 
-This repository contains code and instance files related to kidney exchange optimization problems, with a focus on both exact and heuristic methods. It implements different approaches for solving kidney exchange problems, including the branch-and-bound algorithm and cycle-chain deactivation strategies.
+This repository contains code and instance files related to kidney exchange optimization problems. It implements different approaches for solving kidney exchange problems, including the branch-and-bound algorithm, cycle-chain deactivation strategies and a variety of heuristic methods.
 
 ## Table of Contents
 
